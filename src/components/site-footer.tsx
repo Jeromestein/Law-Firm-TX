@@ -26,8 +26,8 @@ export function SiteFooter({ locale }: FooterProps) {
         </div>
         <div>
           <h5 className="mb-4 font-bold text-white">联系方式</h5>
-          <p className="mb-2">New York Office</p>
-          <p className="mb-2">Shanghai Office</p>
+          <p className="mb-2">Los Angeles Office</p>
+          <p className="mb-2">Irvine Office</p>
           <p>Email: contact@lawfirm.com</p>
         </div>
         <div>
