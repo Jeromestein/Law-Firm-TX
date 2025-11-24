@@ -13,6 +13,9 @@ out
 # production
 build
 
+# extra code
+service-and-fee-list
+
 # misc
 .DS_Store
 *.log
