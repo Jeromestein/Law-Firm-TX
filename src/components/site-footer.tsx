@@ -5,7 +5,10 @@ type FooterProps = {
 };
 
 export function SiteFooter({ locale }: FooterProps) {
-  const anchor = (hash: string) => `/${locale}${hash}`;
+  const anchor = (hash: string) => ({
+    pathname: `/${locale}`,
+    hash: hash.startsWith("#") ? hash.slice(1) : hash
+  });
 
   return (
     <footer
@@ -48,7 +51,7 @@ export function SiteFooter({ locale }: FooterProps) {
             </li>
             <li>
               <Link
-                href={`/${locale}/services`}
+                href={{ pathname: `/${locale}/services` }}
                 className="transition hover:text-gold"
               >
                 服务与报价

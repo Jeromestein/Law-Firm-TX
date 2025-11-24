@@ -94,7 +94,7 @@ export default function LocaleLanding({
               <Link href="#contact">预约咨询</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
-              <Link href="#services">探索业务</Link>
+              <Link href={`/${params.locale}/services`}>探索业务</Link>
             </Button>
           </div>
           <p className="mt-4 text-xs font-medium uppercase tracking-[0.18em] text-gold">

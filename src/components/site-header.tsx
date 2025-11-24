@@ -7,7 +7,10 @@ type HeaderProps = {
 };
 
 export function SiteHeader({ locale }: HeaderProps) {
-  const anchor = (hash: string) => `/${locale}${hash}`;
+  const anchor = (hash: string) => ({
+    pathname: `/${locale}`,
+    hash: hash.startsWith("#") ? hash.slice(1) : hash
+  });
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-primary/95 text-white backdrop-blur-md transition-all duration-300">
@@ -43,7 +46,7 @@ export function SiteHeader({ locale }: HeaderProps) {
             成功案例
           </Link>
           <Link
-            href={`/${locale}/services`}
+            href={{ pathname: `/${locale}/services` }}
             className="px-3 py-2 text-sm font-medium transition hover:text-gold"
           >
             服务与报价
