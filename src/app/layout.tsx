@@ -16,9 +16,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "TX Legal Partners | 全球资本与移民规划",
+  title: "Alex Tian Legal Partners | 全球资本与移民规划",
   description:
-    "TX Legal Partners 专注企业 IPO、资本市场与高端移民规划，为全球客户提供策略与合规并重的法律解决方案。"
+    "Alex Tian Legal Partners 专注企业 IPO、资本市场与高端移民规划，为全球客户提供策略与合规并重的法律解决方案。"
 };
 
 export default function RootLayout({

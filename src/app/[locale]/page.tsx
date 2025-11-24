@@ -62,7 +62,7 @@ export default function LocaleLanding({
         <div className="mx-auto flex h-20 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
           <div className="flex-shrink-0">
             <span className="font-serif text-2xl font-bold tracking-wider text-gold">
-              TX & PARTNERS
+              Alex Tian & PARTNERS
             </span>
           </div>
           <div className="hidden items-baseline space-x-6 md:flex">
@@ -128,11 +128,17 @@ export default function LocaleLanding({
           <p className="mx-auto mb-10 max-w-2xl text-lg font-light text-slate-300 md:text-xl">
             我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。
           </p>
-          <div className="flex justify-center gap-4">
+          <div className="flex flex-wrap justify-center gap-4">
+            <Button asChild size="lg">
+              <Link href="#contact">预约咨询</Link>
+            </Button>
             <Button asChild variant="outline" size="lg">
               <Link href="#services">探索业务</Link>
             </Button>
           </div>
+          <p className="mt-4 text-xs font-medium uppercase tracking-[0.18em] text-gold">
+            咨询：半小时内免费，超过半小时按 $200/小时 收费
+          </p>
         </div>
       </div>
 
@@ -203,7 +209,7 @@ export default function LocaleLanding({
                 id="about-title"
                 className="mb-6 text-4xl font-serif font-bold text-primary"
               >
-                Xin Tian
+                Alex Tian
               </h2>
               <p className="mb-6 leading-relaxed text-slate-600">
                 毕业于世界顶尖法学院 <strong>New York University (NYU)</strong>{" "}
@@ -359,7 +365,7 @@ export default function LocaleLanding({
         <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 text-sm md:grid-cols-4">
           <div className="md:col-span-2">
             <span className="font-serif text-2xl font-bold tracking-wider text-white">
-              TX & PARTNERS
+              Alex Tian & PARTNERS
             </span>
             <p className="mt-4 max-w-xs">
               致力于为全球客户提供卓越的法律解决方案。精于资本，专于移民。
@@ -393,7 +399,7 @@ export default function LocaleLanding({
           </div>
         </div>
         <div className="mx-auto mt-12 max-w-7xl border-t border-white/10 px-4 pt-8 text-center text-xs">
-          © 2026 TX Law Firm. All rights reserved.
+          © 2026 Alex Tian Legal Partners. All rights reserved.
         </div>
       </footer>
     </main>
