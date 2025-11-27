@@ -1,5 +1,6 @@
 "use client";
 
+import type { Route } from "next";
 import { usePathname, useRouter } from "next/navigation";
 import { useTransition } from "react";
 
@@ -30,7 +31,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
     startTransition(() => {
       document.cookie = `NEXT_LOCALE=${target}; path=/; max-age=31536000`;
       const targetPath = buildTargetPath(pathname, target);
-      router.replace(targetPath);
+      router.replace(targetPath as Route);
     });
   };
 

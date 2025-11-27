@@ -23,7 +23,8 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "./src/*"
+        "./src/*",
+        "./service-and-fee-list/*"
       ]
     },
     "plugins": [
@@ -39,6 +40,7 @@
     ".next/types/**/*.ts"
   ],
   "exclude": [
-    "node_modules"
+    "node_modules",
+    "service-and-fee-list"
   ]
 }

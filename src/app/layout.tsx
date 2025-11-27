@@ -1,20 +1,7 @@
 import type { Metadata } from "next";
-import { Inter, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
 import { defaultLocale } from "@/lib/i18n";
-
-const inter = Inter({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-sans"
-});
-
-const playfair = Playfair_Display({
-  subsets: ["latin"],
-  display: "swap",
-  variable: "--font-serif"
-});
 
 export const metadata: Metadata = {
   title: "Apex Bridge 顶桥律师事务所 | 全球资本与移民规划",
@@ -33,7 +20,6 @@ export default function RootLayout({
   return (
     <html
       lang={defaultLocale}
-      className={`${inter.variable} ${playfair.variable}`}
       suppressHydrationWarning
     >
       <body className="bg-slate-50 text-slate-800 antialiased">

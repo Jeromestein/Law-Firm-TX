@@ -31,14 +31,14 @@ export function SiteFooter({ locale }: FooterProps) {
           <p className="mb-2">{dictionary.footer.losAngeles}</p>
           <p className="mb-2">{dictionary.footer.irvine}</p>
           <p className="mb-2">
-            <Link href={dictionary.footer.phoneHref} className="transition hover:text-gold">
+            <a href={dictionary.footer.phoneHref} className="transition hover:text-gold">
               {dictionary.footer.phoneLabel}
-            </Link>
+            </a>
           </p>
           <p>
-            <Link href={dictionary.footer.emailHref} className="transition hover:text-gold">
+            <a href={dictionary.footer.emailHref} className="transition hover:text-gold">
               {dictionary.footer.emailLabel}
-            </Link>
+            </a>
           </p>
         </div>
         <div>
