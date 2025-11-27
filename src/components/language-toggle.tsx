@@ -39,9 +39,22 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
       variant="ghost"
       size="sm"
       onClick={onToggle}
-      className="text-xs font-semibold text-white hover:text-gold"
+      className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-gold"
       disabled={isPending}
     >
+      <svg
+        aria-hidden="true"
+        className="h-3.5 w-3.5"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth="1.6"
+      >
+        <path d="M12 3a9 9 0 1 0 0 18 9 9 0 0 0 0-18Z" />
+        <path d="M3.5 9h17M3.5 15h17" />
+        <path d="M12 3c-2 2.3-3.08 5.3-3 9 .08 3.62 1.1 6.64 3 9" />
+        <path d="M12 3c2 2.3 3.08 5.3 3 9-.08 3.62-1.1 6.64-3 9" />
+      </svg>
       {locale === defaultLocale ? "EN / 中文" : "中文 / EN"}
     </Button>
   );
