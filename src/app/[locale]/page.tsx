@@ -171,6 +171,69 @@ export default function LocaleLanding({
               </div>
             </div>
           </div>
+          <div className="mt-20 grid grid-cols-1 items-center gap-16 md:grid-cols-2">
+            <div className="space-y-4">
+              <p className="text-sm font-bold uppercase tracking-widest text-gold">
+                合伙人 Partner
+              </p>
+              <h3 className="text-3xl font-serif font-bold text-primary">
+                Yilei Huang, Esq.
+              </h3>
+              <div className="space-y-4 leading-relaxed text-slate-600">
+                <p>
+                  Yilei Huang is an attorney focusing her practice on immigration, corporate
+                  law, and civil litigation. She represents both individual and business
+                  clients in state courts, handling complex disputes involving contracts,
+                  shareholder matters, and enforcement actions.
+                </p>
+                <p>
+                  In her immigration practice, Ms. Huang has successfully represented clients
+                  in a wide range of matters, including family-based petitions, employment-based
+                  visas, and adjustment of status. She has particular experience with National
+                  Interest Waiver (NIW) petitions, where she has achieved favorable outcomes for
+                  professionals and researchers in fields such as science, technology, and
+                  business.
+                </p>
+                <p>
+                  In addition to immigration, Ms. Huang advises businesses and investors on
+                  corporate structures, financing arrangements, and compliance with U.S.
+                  regulations. She also provides comprehensive legal services in cross-border
+                  transactions and dispute resolution.
+                </p>
+                <p>
+                  Prior to joining ApexBridge, Ms. Huang worked at law firms in Los Angeles and
+                  Shanghai, including Baker McKenzie FenXun and King &amp; Wood Mallesons,
+                  where she supported multinational clients in IPO projects, corporate
+                  governance, and arbitration cases.
+                </p>
+                <p>
+                  Ms. Huang earned her LL.M. from the University of Southern California (USC)
+                  and her LL.B. from East China University of Political Science and Law. She is
+                  currently pursuing her MBA at UCLA Anderson School of Management. Besides her
+                  identity as an Attorney, she is also a commissioned California Notary Public.
+                </p>
+              </div>
+              <div className="flex flex-wrap gap-3 pt-2">
+                <Button asChild>
+                  <Link href="#contact">{about.ctaPrimary}</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="#services">{about.ctaSecondary}</Link>
+                </Button>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="overflow-hidden rounded-sm bg-slate-200 shadow-2xl">
+                <Image
+                  src="/hyl-profile.jpg"
+                  alt="Portrait of Yilei Huang, Esq."
+                  width={900}
+                  height={900}
+                  className="h-full w-full object-cover"
+                />
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
