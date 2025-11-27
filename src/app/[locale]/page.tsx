@@ -13,6 +13,28 @@ export default function LocaleLanding({
   const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
   const dictionary = getDictionary(locale);
   const { hero, education, about, servicesSection, casesSection } = dictionary.home;
+  const schools = [
+    {
+      name: education.nyu,
+      logo: "/new_york_university_logo.jpeg",
+      alt: "NYU Logo"
+    },
+    {
+      name: education.minnesota,
+      logo: "/university_of_minnesota_logo.jpeg",
+      alt: "University of Minnesota Logo"
+    },
+    {
+      name: education.usc,
+      logo: "/usc_logo.jpeg",
+      alt: "University of Southern California Logo"
+    },
+    {
+      name: education.ucla,
+      logo: "/ucla_logo.jpeg",
+      alt: "University of California, Los Angeles Logo"
+    }
+  ];
 
   return (
     <main className="relative" lang={locale}>
@@ -61,37 +83,29 @@ export default function LocaleLanding({
         </div>
       </div>
 
-      <section className="border-b border-slate-100 bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4 text-center">
-          <p className="mb-8 text-sm uppercase tracking-widest text-slate-500">
+      <section id="education" className="border-b border-slate-100 bg-white py-12">
+        <div className="mx-auto max-w-7xl px-4">
+          <p className="mb-8 text-center text-sm uppercase tracking-widest text-slate-500">
             {education.title}
           </p>
-          <div className="flex flex-wrap items-center justify-center gap-12 opacity-80 transition-all duration-500 hover:grayscale-0 hover:opacity-100 md:grayscale">
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/new_york_university_logo.jpeg"
-                alt="NYU Logo"
-                width={48}
-                height={48}
-                className="object-contain"
-              />
-              <span className="text-xl font-bold text-slate-800">
-                {education.nyu}
-              </span>
-            </div>
-            <div className="hidden h-8 w-px bg-slate-300 md:block" />
-            <div className="flex items-center space-x-3">
-              <Image
-                src="/university_of_minnesota_logo.jpeg"
-                alt="University of Minnesota Logo"
-                width={48}
-                height={48}
-                className="object-contain"
-              />
-              <span className="text-xl font-bold text-slate-800">
-                {education.minnesota}
-              </span>
-            </div>
+          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-left opacity-80 transition-all duration-500 hover:grayscale-0 hover:opacity-100 md:grid-cols-2 md:grayscale lg:gap-10">
+            {schools.map((school) => (
+              <div
+                key={school.name}
+                className="flex items-center gap-3"
+              >
+                <Image
+                  src={school.logo}
+                  alt={school.alt}
+                  width={48}
+                  height={48}
+                  className="object-contain"
+                />
+                <span className="text-xl font-bold text-slate-800">
+                  {school.name}
+                </span>
+              </div>
+            ))}
           </div>
         </div>
       </section>

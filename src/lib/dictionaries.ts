@@ -38,6 +38,8 @@ export type HomeContent = {
     title: string;
     nyu: string;
     minnesota: string;
+    usc: string;
+    ucla: string;
   };
   about: {
     title: string;
@@ -175,7 +177,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       education: {
         title: "精英教育背景与资质",
         nyu: "New York University",
-        minnesota: "Univ. of Minnesota"
+        minnesota: "University of Minnesota",
+        usc: "University of Southern California",
+        ucla: "University of California, Los Angeles",
       },
       about: {
         role: "首席合伙人",
@@ -579,7 +583,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       education: {
         title: "Education & Credentials",
         nyu: "New York University",
-        minnesota: "Univ. of Minnesota"
+        minnesota: "University of Minnesota",
+        usc: "University of Southern California",
+        ucla: "Uiniversity of California, Los Angeles",
       },
       about: {
         role: "Managing Partner",
