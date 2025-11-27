@@ -51,6 +51,12 @@ export type HomeContent = {
     ctaPrimary: string;
     ctaSecondary: string;
   };
+  aboutPartner: {
+    role: string;
+    title: string;
+    paragraphs: string[];
+    imageAlt: string;
+  };
   servicesSection: {
     title: string;
     services: HomeService[];
@@ -196,6 +202,18 @@ const dictionaries: Record<Locale, Dictionary> = {
         ],
         ctaPrimary: "预约咨询",
         ctaSecondary: "查看服务"
+      },
+      aboutPartner: {
+        role: "合伙人",
+        title: "Yilei Huang, Esq.",
+        imageAlt: "黄怡蕾律师照片",
+        paragraphs: [
+          "Yilei Huang 律师专注于移民、公司法及民事诉讼，代表个人与企业客户处理合同纠纷、股东争议及各类执行案件。",
+          "在移民业务中，黄律师成功代理家庭及雇佣移民、身份调整等多类案件，尤其擅长国家利益豁免（NIW），为科技、科研、商业等领域的专业人士取得优异结果。",
+          "除移民外，黄律师亦为企业与投资人提供公司架构、融资安排及合规咨询，并处理跨境交易与争议解决的全流程法律服务。",
+          "加入 ApexBridge 之前，黄律师曾在洛杉矶与上海的知名律所（包括 Baker McKenzie FenXun 与金杜律师事务所）任职，协助跨国客户完成 IPO、公司治理与仲裁项目。",
+          "黄律师获南加州大学（USC）法学硕士（LL.M.）及华东政法大学法学学士（LL.B.），现于 UCLA, Anderson School of Management 攻读 MBA，并担任加州认证公证员。"
+        ]
       },
       servicesSection: {
         title: "核心法律服务",
@@ -602,6 +620,18 @@ const dictionaries: Record<Locale, Dictionary> = {
         ],
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "View Services"
+      },
+      aboutPartner: {
+        role: "Partner",
+        title: "Yilei Huang, Esq.",
+        imageAlt: "Portrait of Yilei Huang, Esq.",
+        paragraphs: [
+          "Yilei Huang is an attorney focusing her practice on immigration, corporate law, and civil litigation. She represents both individual and business clients in state courts, handling complex disputes involving contracts, shareholder matters, and enforcement actions.",
+          "In her immigration practice, Ms. Huang has successfully represented clients in a wide range of matters, including family-based petitions, employment-based visas, and adjustment of status. She has particular experience with National Interest Waiver (NIW) petitions, where she has achieved favorable outcomes for professionals and researchers in fields such as science, technology, and business.",
+          "In addition to immigration, Ms. Huang advises businesses and investors on corporate structures, financing arrangements, and compliance with U.S. regulations. She also provides comprehensive legal services in cross-border transactions and dispute resolution.",
+          "Prior to joining ApexBridge, Ms. Huang worked at law firms in Los Angeles and Shanghai, including Baker McKenzie FenXun and King & Wood Mallesons, where she supported multinational clients in IPO projects, corporate governance, and arbitration cases.",
+          "Ms. Huang earned her LL.M. from the University of Southern California (USC) and her LL.B. from East China University of Political Science and Law. She is currently pursuing her MBA at UCLA, Anderson School of Management. Besides her identity as an Attorney, she is also a commissioned California Notary Public."
+        ]
       },
       servicesSection: {
         title: "Core Legal Services",
