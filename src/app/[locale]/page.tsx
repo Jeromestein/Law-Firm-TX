@@ -116,7 +116,7 @@ export default function LocaleLanding({
               </div>
               <div className="absolute -bottom-6 -right-6 hidden max-w-xs border-l-4 border-gold bg-white p-6 text-sm shadow-xl md:block">
                 <p className="font-serif text-xl italic text-primary">
-                  “法律不仅是规则，更是商业世界的战略艺术。”
+                  {about.quote}
                 </p>
               </div>
             </div>

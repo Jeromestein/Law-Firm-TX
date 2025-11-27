@@ -179,7 +179,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       },
       about: {
         role: "首席合伙人",
-        title: "Apex Bridge 顶桥律师事务所",
+        title: "Alex Tian, Esq.",
         quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
         body1:
           "毕业于世界顶尖法学院 New York University (NYU) 与 University of Minnesota。拥有跨越东西方资本市场的独特视野。",
@@ -583,7 +583,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       },
       about: {
         role: "Managing Partner",
-        title: "Apex Bridge Law Firm",
+        title: "Alex Tian, Esq.",
         quote: "“Law is not just rules—it is the strategy of business.”",
         body1:
           "Graduate of top law schools New York University (NYU) and the University of Minnesota with a cross-border capital markets lens.",
