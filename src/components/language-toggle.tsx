@@ -26,6 +26,9 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
   const [isPending, startTransition] = useTransition();
 
   const target = locale === "zh" ? "en" : "zh";
+  const isZh = locale === "zh";
+  const currentLabel = isZh ? "中文" : "English";
+  const otherLabel = isZh ? "English" : "中文";
 
   const onToggle = () => {
     startTransition(() => {
@@ -56,7 +59,10 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
         <path d="M12 3c-2 2.3-3.08 5.3-3 9 .08 3.62 1.1 6.64 3 9" />
         <path d="M12 3c2 2.3 3.08 5.3 3 9-.08 3.62-1.1 6.64-3 9" />
       </svg>
-      {locale === defaultLocale ? "EN / 中文" : "中文 / EN"}
+      <span className="inline-flex items-center gap-1.5">
+        <span className="text-gold font-semibold">{currentLabel}</span>
+        <span className="text-white/60">/ {otherLabel}</span>
+      </span>
     </Button>
   );
 }
