@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 
 import "./globals.css";
+import { defaultLocale } from "@/lib/i18n";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -28,7 +29,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      lang="zh-CN"
+      lang={defaultLocale}
       className={`${inter.variable} ${playfair.variable}`}
       suppressHydrationWarning
     >
