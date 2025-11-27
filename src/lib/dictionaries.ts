@@ -159,7 +159,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ipoLink: "IPO 业务",
       pricingLink: "服务与报价",
       contactLink: "移民评估",
-      copyright: "© 2026 TX Law Firm. 保留所有权利。"
+      copyright: "© 2026 Apex Bridge Law Group. 保留所有权利。"
     },
     home: {
       hero: {
@@ -563,7 +563,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       ipoLink: "IPO Services",
       pricingLink: "Services & Pricing",
       contactLink: "Immigration Assessment",
-      copyright: "© 2026 TX Law Firm. All rights reserved."
+      copyright: "© 2026 Apex Bridge Law Group. All rights reserved."
     },
     home: {
       hero: {
