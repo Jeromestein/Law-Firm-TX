@@ -22,7 +22,7 @@ export function SiteFooter({ locale }: FooterProps) {
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 text-sm md:grid-cols-4">
         <div className="md:col-span-2">
           <span className="font-serif text-2xl font-bold tracking-wider text-white">
-            Alex Tian & PARTNERS
+            {dictionary.brandName}
           </span>
           <p className="mt-4 max-w-xs">{dictionary.footer.tagline}</p>
         </div>
@@ -30,7 +30,16 @@ export function SiteFooter({ locale }: FooterProps) {
           <h5 className="mb-4 font-bold text-white">{dictionary.footer.contactTitle}</h5>
           <p className="mb-2">{dictionary.footer.losAngeles}</p>
           <p className="mb-2">{dictionary.footer.irvine}</p>
-          <p>{dictionary.footer.email}</p>
+          <p className="mb-2">
+            <Link href={dictionary.footer.phoneHref} className="transition hover:text-gold">
+              {dictionary.footer.phoneLabel}
+            </Link>
+          </p>
+          <p>
+            <Link href={dictionary.footer.emailHref} className="transition hover:text-gold">
+              {dictionary.footer.emailLabel}
+            </Link>
+          </p>
         </div>
         <div>
           <h5 className="mb-4 font-bold text-white">{dictionary.footer.quickLinksTitle}</h5>

@@ -17,9 +17,9 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
-  title: "Alex Tian Legal Partners | 全球资本与移民规划",
+  title: "Apex Bridge 顶桥律师事务所 | 全球资本与移民规划",
   description:
-    "Alex Tian Legal Partners 专注企业 IPO、资本市场与高端移民规划，为全球客户提供策略与合规并重的法律解决方案。"
+    "Apex Bridge 顶桥律师事务所专注企业 IPO、资本市场与高端移民规划，为全球客户提供策略与合规并重的法律解决方案。"
 };
 
 export default function RootLayout({

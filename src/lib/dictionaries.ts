@@ -108,7 +108,10 @@ export type FooterContent = {
   contactTitle: string;
   losAngeles: string;
   irvine: string;
-  email: string;
+  phoneLabel: string;
+  phoneHref: string;
+  emailLabel: string;
+  emailHref: string;
   quickLinksTitle: string;
   aboutLink: string;
   ipoLink: string;
@@ -119,6 +122,7 @@ export type FooterContent = {
 
 export type Dictionary = {
   locale: Locale;
+  brandName: string;
   nav: NavContent;
   footer: FooterContent;
   home: HomeContent;
@@ -130,6 +134,7 @@ export type Dictionary = {
 const dictionaries: Record<Locale, Dictionary> = {
   zh: {
     locale: "zh",
+    brandName: "Apex Bridge 顶桥律师事务所",
     languageLabel: "语言",
     languageButton: "EN / 中文",
     nav: {
@@ -143,9 +148,12 @@ const dictionaries: Record<Locale, Dictionary> = {
     footer: {
       tagline: "致力于为全球客户提供卓越的法律解决方案。精于资本，专于移民。",
       contactTitle: "联系方式",
-      losAngeles: "洛杉矶办公室",
-      irvine: "尔湾办公室",
-      email: "邮箱：contact@lawfirm.com",
+      losAngeles: "纽约地址：60-20 Woodside Ave Suite 205, Woodside, NY 11377",
+      irvine: "加州地址：7515 Irvine Center Dr Suite 130, Irvine, CA 92618",
+      phoneLabel: "电话：949-213-5199",
+      phoneHref: "tel:9492135199",
+      emailLabel: "邮箱：alextian@apexbrg.com",
+      emailHref: "mailto:alextian@apexbrg.com",
       quickLinksTitle: "快速链接",
       aboutLink: "关于我们",
       ipoLink: "IPO 业务",
@@ -171,7 +179,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       },
       about: {
         role: "首席合伙人",
-        title: "Alex Tian",
+        title: "Apex Bridge 顶桥律师事务所",
         quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
         body1:
           "毕业于世界顶尖法学院 New York University (NYU) 与 University of Minnesota。拥有跨越东西方资本市场的独特视野。",
@@ -530,6 +538,7 @@ const dictionaries: Record<Locale, Dictionary> = {
   },
   en: {
     locale: "en",
+    brandName: "Apex Bridge Law Group",
     languageLabel: "Language",
     languageButton: "中文 / EN",
     nav: {
@@ -543,9 +552,12 @@ const dictionaries: Record<Locale, Dictionary> = {
     footer: {
       tagline: "Dedicated to delivering exceptional legal solutions. Capital-first, immigration-focused.",
       contactTitle: "Contact",
-      losAngeles: "Los Angeles Office",
-      irvine: "Irvine Office",
-      email: "Email: contact@lawfirm.com",
+      losAngeles: "New York: 60-20 Woodside Ave Suite 205, Woodside, NY 11377",
+      irvine: "California: 7515 Irvine Center Dr Suite 130, Irvine, CA 92618",
+      phoneLabel: "Phone: 949-213-5199",
+      phoneHref: "tel:9492135199",
+      emailLabel: "Email: alextian@apexbrg.com",
+      emailHref: "mailto:alextian@apexbrg.com",
       quickLinksTitle: "Quick Links",
       aboutLink: "About",
       ipoLink: "IPO Services",
@@ -571,7 +583,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       },
       about: {
         role: "Managing Partner",
-        title: "Alex Tian",
+        title: "Apex Bridge Law Firm",
         quote: "“Law is not just rules—it is the strategy of business.”",
         body1:
           "Graduate of top law schools New York University (NYU) and the University of Minnesota with a cross-border capital markets lens.",

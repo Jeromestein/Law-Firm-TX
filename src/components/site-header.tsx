@@ -51,7 +51,7 @@ export function SiteHeader({ locale }: HeaderProps) {
             )}
           </button>
           <span className="font-serif text-2xl font-bold tracking-wider text-gold">
-            Alex Tian & PARTNERS
+            {dictionary.brandName}
           </span>
         </div>
         <div className="flex items-center gap-3 sm:gap-4">
