@@ -76,12 +76,12 @@ export function SiteHeader({ locale }: HeaderProps) {
       </div>
       {open ? (
         <div className="border-t border-white/10 bg-primary/95 text-sm text-white shadow-lg sm:hidden">
-          <div className="mx-auto max-w-7xl px-4 py-3 space-y-2">
+          <div className="mx-auto flex max-w-7xl flex-col items-center px-4 py-4 space-y-3 text-center tracking-[0.08em]">
             {navLinks.map((item) => (
               <Link
                 key={String(item.label)}
                 href={item.href}
-                className="block rounded-sm px-3 py-2 transition hover:bg-white/10"
+                className="block w-full rounded-sm px-3 py-3 text-base transition hover:bg-white/10"
                 onClick={() => setOpen(false)}
               >
                 {item.label}
@@ -89,7 +89,7 @@ export function SiteHeader({ locale }: HeaderProps) {
             ))}
             <Button
               asChild
-              className="w-full justify-center px-3 py-2 text-sm font-semibold"
+              className="w-full justify-center px-3 py-3 text-sm font-semibold tracking-[0.08em]"
               onClick={() => setOpen(false)}
             >
               <Link href={anchor("#contact")}>{dictionary.nav.consult}</Link>
