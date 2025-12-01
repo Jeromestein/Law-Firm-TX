@@ -12,9 +12,10 @@ type LogoMarqueeProps = {
   items: LogoItem[];
   caption?: string;
   className?: string;
+  title?: string;
 };
 
-export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
+export function LogoMarquee({ items, caption, className, title }: LogoMarqueeProps) {
   const loops = 2;
   const containerClass = [
     "relative overflow-hidden bg-slate-950 py-10 text-white",
@@ -26,6 +27,11 @@ export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
   return (
     <section className={containerClass} aria-label="Logo marquee">
       <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-5 lg:px-12">
+        {title ? (
+          <p className="mb-6 text-center text-sm uppercase tracking-[0.3em] text-gold">
+            {title}
+          </p>
+        ) : null}
         <div className="relative w-full overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:z-10 before:block before:bg-[linear-gradient(to_right,rgb(4,6,15)_0%,rgba(4,6,15,0.95)_8%,rgba(4,6,15,0.1)_18%,rgba(4,6,15,0)_30%,rgba(4,6,15,0)_70%,rgba(4,6,15,0.1)_82%,rgba(4,6,15,0.95)_92%,rgb(4,6,15)_100%)]">
           <div className="flex flex-nowrap items-center justify-center gap-6 lg:gap-10">
             {Array.from({ length: loops }).map((_, loopIndex) => (
@@ -56,7 +62,7 @@ export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
           </div>
         </div>
         {caption && (
-          <p className="mt-6 text-center text-sm text-slate-300">
+          <p className="mt-16 mb-2 text-center text-sm uppercase tracking-[0.3em] text-gold">
             {caption}
           </p>
         )}

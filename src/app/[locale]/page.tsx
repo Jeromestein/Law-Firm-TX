@@ -97,7 +97,7 @@ export default function LocaleLanding({
         </div>
       </div>
 
-      <section
+      {/* <section
         id="education"
         className="relative overflow-hidden border-b border-slate-900/40 bg-gradient-to-r from-slate-950 via-slate-900 to-primary/80 py-16 text-white"
       >
@@ -144,11 +144,18 @@ export default function LocaleLanding({
             ))}
           </div>
         </div>
+      </section> */}
+
+      <section
+        id="education"
+      > 
+        <LogoMarquee
+          title={education.title}
+          items={schools}
+          caption={educationMarquee.caption}
+        />
       </section>
-      <LogoMarquee
-        items={schools}
-        caption={educationMarquee.caption}
-      />
+      
 
       <section
         id="about"
