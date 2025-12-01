@@ -79,108 +79,132 @@ export default function ServicesPage({ params }: PageProps) {
           <p className="text-sm text-slate-600">{pricing.categoriesIntro.description}</p>
         </div>
 
-        <div id="categories" className="flex flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-4 shadow-sm">
-          {categories.map((category) => (
-            <button
-              key={category.id}
-              type="button"
-              onClick={() => setActiveCategory(category.id)}
-              className={`rounded-full border px-4 py-2 text-xs font-semibold transition ${
-                activeCategory === category.id
-                  ? "border-gold bg-gold/10 text-primary"
-                  : "border-slate-200 bg-white text-primary hover:border-gold/60"
-              }`}
-            >
-              {category.name}
-            </button>
-          ))}
+        <div
+          id="categories"
+          className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-6 shadow-lg ring-1 ring-slate-200/60"
+        >
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-primary/5 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
+          </div>
+          <div className="relative flex flex-wrap items-center justify-center gap-3">
+            {categories.map((category) => (
+              <button
+                key={category.id}
+                type="button"
+                onClick={() => setActiveCategory(category.id)}
+                className={`rounded-full border px-5 py-2 text-sm font-semibold transition ${
+                  activeCategory === category.id
+                    ? "border-gold bg-gold/10 text-primary shadow-sm"
+                    : "border-slate-200 bg-white text-primary hover:border-gold/60"
+                }`}
+              >
+                {category.name}
+              </button>
+            ))}
+          </div>
         </div>
 
         <section
           key={current.id}
           id={current.id}
-          className="space-y-6 rounded-sm bg-white p-6 shadow-sm"
+          className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-xl ring-1 ring-slate-200/60 md:p-8"
         >
-          <div className="flex items-start justify-between gap-3">
-            <div>
-              <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
-                {current.name}
-              </p>
-              <p className="mt-1 text-sm text-slate-600">{current.description}</p>
-            </div>
-            <Button asChild variant="ghost" className="px-0 text-sm">
-              <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary} →</Link>
-            </Button>
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-primary/5 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
           </div>
-
-          <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
-            {current.services.map((service, index) => (
-              <div
-                key={`${service.title}-${index}`}
-                className="relative flex h-full flex-col rounded-sm border border-slate-200 bg-slate-50/70"
-              >
-                {service.popular ? (
-                  <span className="absolute -top-2 right-3 rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary">
-                    ★
-                  </span>
-                ) : null}
-                <div className="border-b border-slate-100 px-4 py-3">
-                  <p className="text-base font-semibold text-primary">
-                    {service.title}
-                  </p>
-                  {service.subtitle ? (
-                    <p className="text-xs text-slate-600">{service.subtitle}</p>
-                  ) : null}
-                </div>
-                <ul className="flex-1 divide-y divide-slate-100">
-                  {service.features.map((feature, fIndex) => (
-                    <li
-                      key={`${service.title}-${fIndex}`}
-                      className="px-4 py-3 text-sm text-primary"
-                    >
-                      <div className="flex items-start justify-between gap-3">
-                        <span className="text-slate-700">{feature.label}</span>
-                        <span className="text-right font-semibold text-primary">
-                          {feature.price}
-                        </span>
-                      </div>
-                      {feature.note ? (
-                        <p className="mt-1 text-xs text-slate-500">{feature.note}</p>
-                      ) : null}
-                    </li>
-                  ))}
-                </ul>
-                <div className="border-t border-slate-100 p-4">
-                  <Button asChild className="w-full">
-                    <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary}</Link>
-                  </Button>
-                </div>
+          <div className="relative space-y-6">
+            <div className="flex items-start justify-between gap-3">
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-[0.2em] text-gold">
+                  {current.name}
+                </p>
+                <p className="mt-1 text-sm text-slate-600">{current.description}</p>
               </div>
-            ))}
+              <Button asChild variant="ghost" className="px-0 text-sm">
+                <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary} →</Link>
+              </Button>
+            </div>
+
+            <div className="grid grid-cols-1 gap-4 md:grid-cols-2 lg:grid-cols-3">
+              {current.services.map((service, index) => (
+                <div
+                  key={`${service.title}-${index}`}
+                  className="relative flex h-full flex-col rounded-sm border border-slate-200 bg-slate-50/70"
+                >
+                  {service.popular ? (
+                    <span className="absolute -top-2 right-3 rounded-full bg-gold px-3 py-1 text-xs font-bold text-primary">
+                      ★
+                    </span>
+                  ) : null}
+                  <div className="border-b border-slate-100 px-4 py-3">
+                    <p className="text-base font-semibold text-primary">
+                      {service.title}
+                    </p>
+                    {service.subtitle ? (
+                      <p className="text-xs text-slate-600">{service.subtitle}</p>
+                    ) : null}
+                  </div>
+                  <ul className="flex-1 divide-y divide-slate-100">
+                    {service.features.map((feature, fIndex) => (
+                      <li
+                        key={`${service.title}-${fIndex}`}
+                        className="px-4 py-3 text-sm text-primary"
+                      >
+                        <div className="flex items-start justify-between gap-3">
+                          <span className="text-slate-700">{feature.label}</span>
+                          <span className="text-right font-semibold text-primary">
+                            {feature.price}
+                          </span>
+                        </div>
+                        {feature.note ? (
+                          <p className="mt-1 text-xs text-slate-500">{feature.note}</p>
+                        ) : null}
+                      </li>
+                    ))}
+                  </ul>
+                  <div className="border-t border-slate-100 p-4">
+                    <Button asChild className="w-full">
+                      <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary}</Link>
+                    </Button>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
-        <section className="rounded-sm bg-white p-6 shadow-sm">
-          <div className="text-center space-y-2">
-            <h3 className="text-xl font-serif font-bold text-primary">
-              {pricing.includes.title}
-            </h3>
-            <p className="text-sm text-slate-600">{pricing.includes.subtitle}</p>
+        <section
+          id="notes"
+          className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 p-6 shadow-xl ring-1 ring-slate-200/60 md:p-8"
+        >
+          <div className="pointer-events-none absolute inset-0">
+            <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-primary/5 blur-3xl" />
+            <div className="absolute bottom-0 right-0 h-64 w-64 rounded-full bg-gold/10 blur-3xl" />
           </div>
-          <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
-            {pricing.includes.blocks.map((block) => (
-              <div
-                key={block.title}
-                className="rounded-sm border border-slate-200 bg-slate-50/60 p-4"
-              >
-                <h4 className="text-sm font-semibold text-primary">{block.title}</h4>
-                <ul className="mt-3 space-y-2 text-sm text-slate-700">
-                  {block.items.map((item) => (
-                    <li key={item}>{item}</li>
-                  ))}
-                </ul>
-              </div>
-            ))}
+          <div className="relative">
+            <div className="text-center space-y-2">
+              <h3 className="text-xl font-serif font-bold text-primary">
+                {pricing.includes.title}
+              </h3>
+              <p className="text-sm text-slate-600">{pricing.includes.subtitle}</p>
+            </div>
+            <div className="mt-6 grid grid-cols-1 gap-4 md:grid-cols-2">
+              {pricing.includes.blocks.map((block) => (
+                <div
+                  key={block.title}
+                  className="rounded-sm border border-slate-200 bg-slate-50/60 p-4"
+                >
+                  <h4 className="text-sm font-semibold text-primary">{block.title}</h4>
+                  <ul className="mt-3 space-y-2 text-sm text-slate-700">
+                    {block.items.map((item) => (
+                      <li key={item}>{item}</li>
+                    ))}
+                  </ul>
+                </div>
+              ))}
+            </div>
           </div>
         </section>
 
