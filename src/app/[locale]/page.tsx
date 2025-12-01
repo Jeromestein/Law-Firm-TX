@@ -257,7 +257,7 @@ export default function LocaleLanding({
       </section>
       <section
         id="services"
-        className="bg-primary py-24 text-white"
+        className="bg-primary py-16 text-white"
         aria-labelledby="services-title"
       >
         <div className="mx-auto max-w-7xl px-4">
