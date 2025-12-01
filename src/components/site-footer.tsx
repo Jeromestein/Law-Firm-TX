@@ -70,7 +70,7 @@ export function SiteFooter({ locale }: FooterProps) {
             </li>
             <li>
               <Link
-                href={anchor("#contact")}
+                href={{ pathname: `/${locale}/contact` }}
                 className="transition hover:text-gold"
               >
                 {dictionary.footer.contactLink}

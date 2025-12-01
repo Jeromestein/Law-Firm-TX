@@ -51,9 +51,9 @@ export function SiteHeader({ locale }: HeaderProps) {
               </svg>
             )}
           </button>
-          <span className="font-serif text-2xl font-bold tracking-wider text-gold">
+          <Link href={`/${locale}`} className="font-serif text-2xl font-bold tracking-wider text-gold">
             {dictionary.brandName}
-          </span>
+          </Link>
         </div>
         <div className="flex items-center gap-3 sm:gap-4">
           <div className="hidden items-center space-x-4 lg:space-x-6 md:flex">
