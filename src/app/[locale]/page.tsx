@@ -95,27 +95,49 @@ export default function LocaleLanding({
         </div>
       </div>
 
-      <section id="education" className="border-b border-slate-100 bg-white py-12">
-        <div className="mx-auto max-w-7xl px-4">
-          <p className="mb-8 text-center text-sm uppercase tracking-widest text-slate-500">
+      <section
+        id="education"
+        className="relative overflow-hidden border-b border-slate-900/40 bg-gradient-to-r from-slate-950 via-slate-900 to-primary/80 py-16 text-white"
+      >
+        <div className="pointer-events-none absolute inset-0 opacity-70">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_rgba(255,255,255,0.08),_transparent_45%)]" />
+          <div className="absolute inset-0 bg-[linear-gradient(120deg,rgba(255,255,255,0.06),transparent_40%,rgba(255,255,255,0.08)_60%,transparent_90%)]" />
+        </div>
+        <div className="relative mx-auto max-w-7xl px-4">
+          <p className="mb-2 text-center text-sm uppercase tracking-[0.3em] text-gold">
             {education.title}
           </p>
-          <div className="mx-auto grid max-w-4xl grid-cols-1 gap-8 text-left opacity-80 transition-all duration-500 hover:grayscale-0 hover:opacity-100 md:grid-cols-2 md:grayscale lg:gap-10">
+          {education.subtitle ? (
+            <p className="mx-auto mb-10 max-w-2xl text-center text-base text-slate-200">
+              {education.subtitle}
+            </p>
+          ) : (
+            <div className="mb-8" />
+          )}
+          <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 xl:grid-cols-3">
             {schools.map((school) => (
               <div
                 key={school.name}
-                className="flex items-center gap-3"
+                className="group relative overflow-hidden rounded-xl border border-white/10 bg-white/5 p-5 shadow-2xl backdrop-blur-md transition duration-300 ease-out hover:-translate-y-1 hover:border-gold/60 hover:bg-white/10 md:p-6"
               >
-                <Image
-                  src={school.logo}
-                  alt={school.alt}
-                  width={48}
-                  height={48}
-                  className="object-contain"
-                />
-                <span className="text-xl font-bold text-slate-800">
-                  {school.name}
-                </span>
+                <div className="absolute inset-0 opacity-0 transition duration-300 group-hover:opacity-100">
+                  <div className="absolute -left-24 top-0 h-32 w-52 rotate-12 bg-white/10 blur-2xl" />
+                </div>
+                <div className="flex items-center gap-4">
+                  <div className="relative flex h-14 w-14 items-center justify-center rounded-full bg-white/10 p-3 ring-1 ring-white/20">
+                    <Image
+                      src={school.logo}
+                      alt={school.alt}
+                      width={48}
+                      height={48}
+                      className="h-full w-full object-contain"
+                    />
+                  </div>
+                  <span className="text-lg font-semibold">
+                    {school.name}
+                  </span>
+                </div>
+                <span className="pointer-events-none absolute inset-0 translate-x-[-120%] bg-gradient-to-r from-transparent via-white/25 to-transparent transition duration-700 ease-out group-hover:translate-x-[120%]" />
               </div>
             ))}
           </div>

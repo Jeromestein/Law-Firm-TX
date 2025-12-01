@@ -36,11 +36,17 @@ export type HomeContent = {
   };
   education: {
     title: string;
+    subtitle: string;
     nyu: string;
+    nyuDegree: string;
     minnesota: string;
+    minnesotaDegree: string;
     usc: string;
+    uscDegree: string;
     ucla: string;
+    uclaDegree: string;
     harvard: string;
+    harvardDegree: string;
   };
   about: {
     title: string;
@@ -180,16 +186,22 @@ const dictionaries: Record<Locale, Dictionary> = {
           "我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。",
         ctaPrimary: "预约咨询",
         ctaSecondary: "探索业务",
-        note: "咨询：半小时内免费，超过半小时按 $200/小时 收费"
-      },
-      education: {
-        title: "精英教育背景与资质",
-        nyu: "New York University",
-        minnesota: "University of Minnesota",
-        usc: "University of Southern California",
-        ucla: "University of California, Los Angeles",
-        harvard: "Harvard University",
-      },
+      note: "咨询：半小时内免费，超过半小时按 $200/小时 收费"
+    },
+    education: {
+      title: "精英教育背景与资质",
+      subtitle: "",
+      nyu: "New York University",
+      nyuDegree: "NYU · 法学院训练",
+      minnesota: "University of Minnesota",
+      minnesotaDegree: "明尼苏达大学 · 法学院训练",
+      usc: "University of Southern California",
+      uscDegree: "USC · 法学硕士 (LL.M.)",
+      ucla: "University of California, Los Angeles",
+      uclaDegree: "UCLA Anderson · MBA (在读)",
+      harvard: "Harvard University",
+      harvardDegree: "哈佛大学 · 继续教育课程",
+    },
       about: {
         role: "首席合伙人",
         title: "Alex Tian, Esq.",
@@ -600,16 +612,22 @@ const dictionaries: Record<Locale, Dictionary> = {
           "We deliver more than legal advice—we build your bridge to the future with deep U.S. training and battle-tested experience. The bridge that lets clients rest easy • your safe crossing over legal challenges.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "Explore Services",
-        note: "Consultations: first 30 minutes free, then $200/hour"
-      },
-      education: {
-        title: "Education & Credentials",
-        nyu: "New York University",
-        minnesota: "University of Minnesota",
-        usc: "University of Southern California",
-        ucla: "Uiniversity of California, Los Angeles",
-        harvard: "Harvard University",
-      },
+      note: "Consultations: first 30 minutes free, then $200/hour"
+    },
+    education: {
+      title: "Education & Credentials",
+      subtitle: "",
+      nyu: "New York University",
+      nyuDegree: "NYU School of Law training",
+      minnesota: "University of Minnesota",
+      minnesotaDegree: "University of Minnesota Law training",
+      usc: "University of Southern California",
+      uscDegree: "USC Gould LL.M.",
+      ucla: "University of California, Los Angeles",
+      uclaDegree: "UCLA Anderson MBA (in progress)",
+      harvard: "Harvard University",
+      harvardDegree: "Harvard University continuing education",
+    },
       about: {
         role: "Managing Partner",
         title: "Alex Tian, Esq.",
