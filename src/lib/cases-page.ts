@@ -26,14 +26,14 @@ export type CasesPageContent = {
 };
 
 const caseImages = {
-  eb1Doctor: "/eb-1a-green-card.jpg",
-  eb1Artist: "/ppl-presenting.jpeg",
-  eb1Musician: "/tx_profile.jpg",
-  eb1Coach: "/ppl-typing.jpeg",
-  capitalDigital: "/ppl-presenting.jpeg",
-  healthcareIpo: "/ppl-typing.jpeg",
-  widowWaiver: "/hyl-profile.jpg",
-  hardshipWaiver: "/eb-1a-green-card.jpg"
+  eb1Doctor: "/cases/eb1Doctor.jpg",
+  eb1Artist: "/cases/eb1Artist.jpg",
+  eb1Musician: "/cases/eb1Musician.jpg",
+  eb1Coach: "/cases/eb1Coach.jpg",
+  capitalDigital: "/cases/capitalDigital.webp",
+  healthcareIpo: "/cases/healthcareIpo.webp",
+  widowWaiver: "/cases/widowWaiver.jpg",
+  hardshipWaiver: "/cases/hardshipWaiver.jpg"
 };
 
 const casesContent: Record<Locale, CasesPageContent> = {

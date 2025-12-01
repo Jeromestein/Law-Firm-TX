@@ -83,7 +83,7 @@ export default function CasesPage({ params }: PageProps) {
             <Link
               key={section.title}
               href={`#${sectionId(section.title)}`}
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-xs font-semibold text-primary transition duration-200 hover:-translate-y-0.5 hover:border-gold/70 hover:bg-gold/5 hover:shadow-sm"
+              className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-primary transition duration-200 hover:-translate-y-0.5 hover:border-gold/70 hover:bg-gold/5 hover:shadow-sm"
             >
               <span className="h-2 w-2 rounded-full bg-gold transition duration-200 group-hover:scale-110" />
               {section.title}
