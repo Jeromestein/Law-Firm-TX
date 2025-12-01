@@ -48,6 +48,9 @@ export type HomeContent = {
     harvard: string;
     harvardDegree: string;
   };
+  educationMarquee: {
+    caption: string;
+  };
   about: {
     title: string;
     role: string;
@@ -202,11 +205,14 @@ const dictionaries: Record<Locale, Dictionary> = {
       harvard: "Harvard University",
       harvardDegree: "哈佛大学 · 继续教育课程",
     },
-      about: {
-        role: "首席合伙人",
-        title: "Alex Tian, Esq.",
-        quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
-        imageAlt: "Alex Tian 律师肖像",
+    educationMarquee: {
+      caption: "这些院校的训练和校友网络，帮助我们连接全球资源。"
+    },
+    about: {
+      role: "首席合伙人",
+      title: "Alex Tian, Esq.",
+      quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
+      imageAlt: "Alex Tian 律师肖像",
         body1:
           "毕业于世界顶尖法学院 New York University (NYU) 与 University of Minnesota。拥有跨越东西方资本市场的独特视野。",
         body2:
@@ -628,11 +634,14 @@ const dictionaries: Record<Locale, Dictionary> = {
       harvard: "Harvard University",
       harvardDegree: "Harvard University continuing education",
     },
-      about: {
-        role: "Managing Partner",
-        title: "Alex Tian, Esq.",
-        quote: "“Law is not just rules—it is the strategy of business.”",
-        imageAlt: "Portrait of Alex Tian, Esq.",
+    educationMarquee: {
+      caption: "Training and alumni networks across these schools connect us globally."
+    },
+    about: {
+      role: "Managing Partner",
+      title: "Alex Tian, Esq.",
+      quote: "“Law is not just rules—it is the strategy of business.”",
+      imageAlt: "Portrait of Alex Tian, Esq.",
         body1:
           "Graduate of top law schools New York University (NYU) and the University of Minnesota with a cross-border capital markets lens.",
         body2:

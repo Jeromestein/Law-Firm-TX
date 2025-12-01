@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
+import { LogoMarquee } from "@/components/logo-marquee";
 import { getDictionary } from "@/lib/dictionaries";
 import { isSupportedLocale } from "@/lib/i18n";
 
@@ -15,6 +16,7 @@ export default function LocaleLanding({
   const {
     hero,
     education,
+    educationMarquee,
     about,
     aboutPartner,
     servicesSection,
@@ -143,6 +145,10 @@ export default function LocaleLanding({
           </div>
         </div>
       </section>
+      <LogoMarquee
+        items={schools}
+        caption={educationMarquee.caption}
+      />
 
       <section
         id="about"
