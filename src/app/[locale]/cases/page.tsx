@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { SectionCta } from "@/components/section-cta";
 import { getCasesContent, type CaseEntry } from "@/lib/cases-page";
 import { getDictionary } from "@/lib/dictionaries";
 import { isSupportedLocale } from "@/lib/i18n";
@@ -115,6 +116,11 @@ export default function CasesPage({ params }: PageProps) {
             </div>
           </section>
         ) : null}
+        <SectionCta
+          content={dictionary.pricing.sectionCta}
+          primaryHref={anchor("#contact")}
+          secondaryHref={anchor("#services")}
+        />
       </div>
     </main>
   );

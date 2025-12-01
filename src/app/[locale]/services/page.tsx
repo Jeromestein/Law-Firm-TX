@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
+import { SectionCta } from "@/components/section-cta";
 import { getDictionary, type PricingCategory } from "@/lib/dictionaries";
 import { isSupportedLocale } from "@/lib/i18n";
 
@@ -183,29 +184,11 @@ export default function ServicesPage({ params }: PageProps) {
           </div>
         </section>
 
-        <section className="rounded-sm bg-primary text-white">
-          <div className="mx-auto flex flex-col items-center gap-3 px-6 py-10 text-center md:flex-row md:justify-between md:text-left">
-            <div>
-              <p className="text-sm uppercase tracking-[0.18em] text-gold">
-                {pricing.sectionCta.eyebrow}
-              </p>
-              <h3 className="mt-1 text-2xl font-serif font-bold">
-                {pricing.sectionCta.heading}
-              </h3>
-              <p className="mt-2 text-sm text-slate-100">
-                {pricing.sectionCta.description}
-              </p>
-            </div>
-            <div className="flex flex-wrap gap-3">
-              <Button asChild size="lg">
-                <Link href={anchor("#contact")}>{pricing.sectionCta.primary}</Link>
-              </Button>
-              <Button asChild variant="outline" size="lg">
-                <Link href={anchor("#services")}>{pricing.sectionCta.secondary}</Link>
-              </Button>
-            </div>
-          </div>
-        </section>
+        <SectionCta
+          content={pricing.sectionCta}
+          primaryHref={anchor("#contact")}
+          secondaryHref={anchor("#services")}
+        />
       </div>
     </main>
   );
