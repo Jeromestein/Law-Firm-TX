@@ -46,6 +46,7 @@ export type HomeContent = {
     title: string;
     role: string;
     quote: string;
+    imageAlt: string;
     body1: string;
     body2: string;
     bullets: string[];
@@ -193,6 +194,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         role: "首席合伙人",
         title: "Alex Tian, Esq.",
         quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
+        imageAlt: "Alex Tian 律师肖像",
         body1:
           "毕业于世界顶尖法学院 New York University (NYU) 与 University of Minnesota。拥有跨越东西方资本市场的独特视野。",
         body2:
@@ -208,7 +210,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       aboutPartner: {
         role: "合伙人",
         title: "Yilei Huang, Esq.",
-        imageAlt: "黄怡蕾律师照片",
+        imageAlt: "Yilei Huang 律师照片",
         paragraphs: [
           "Yilei Huang 律师专注于移民、公司法及民事诉讼，代表个人与企业客户处理合同纠纷、股东争议及各类执行案件。",
           "在移民业务中，黄律师成功代理家庭及雇佣移民、身份调整等多类案件，尤其擅长国家利益豁免（NIW），为科技、科研、商业等领域的专业人士取得优异结果。",
@@ -612,6 +614,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         role: "Managing Partner",
         title: "Alex Tian, Esq.",
         quote: "“Law is not just rules—it is the strategy of business.”",
+        imageAlt: "Portrait of Alex Tian, Esq.",
         body1:
           "Graduate of top law schools New York University (NYU) and the University of Minnesota with a cross-border capital markets lens.",
         body2:

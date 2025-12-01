@@ -133,7 +133,7 @@ export default function LocaleLanding({
               <div className="overflow-hidden rounded-sm bg-slate-200 shadow-2xl">
                 <Image
                   src="/tx_profile.jpg"
-                  alt="律师照片"
+                  alt={about.imageAlt}
                   width={900}
                   height={900}
                   className="h-full w-full object-cover"
