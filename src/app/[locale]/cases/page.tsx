@@ -53,6 +53,7 @@ export default function CasesPage({ params }: PageProps) {
           result: "Result"
         };
 
+  const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const anchor = (hash: string) => ({
     pathname: `/${locale}`,
     hash: hash.startsWith("#") ? hash.slice(1) : hash
@@ -110,7 +111,7 @@ export default function CasesPage({ params }: PageProps) {
           </p>
           <div className="flex flex-wrap gap-3">
             <Button asChild size="lg">
-              <Link href={anchor("#contact")}>{dictionary.home.hero.ctaPrimary}</Link>
+              <Link href={contactHref}>{dictionary.home.hero.ctaPrimary}</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href={anchor("#services")}>{dictionary.home.hero.ctaSecondary}</Link>
@@ -201,7 +202,7 @@ export default function CasesPage({ params }: PageProps) {
 
         <SectionCta
           content={dictionary.pricing.sectionCta}
-          primaryHref={anchor("#contact")}
+          primaryHref={contactHref}
           secondaryHref={anchor("#services")}
         />
       </div>

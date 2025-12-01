@@ -13,6 +13,7 @@ export default function LocaleLanding({
 }) {
   const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
   const dictionary = getDictionary(locale);
+  const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const {
     hero,
     education,
@@ -85,7 +86,7 @@ export default function LocaleLanding({
           </p>
           <div className="flex flex-wrap justify-center gap-4">
             <Button asChild size="lg">
-              <Link href="#contact">{hero.ctaPrimary}</Link>
+              <Link href={contactHref}>{hero.ctaPrimary}</Link>
             </Button>
             <Button asChild variant="outline" size="lg">
               <Link href={`/${locale}/services`}>{hero.ctaSecondary}</Link>
@@ -199,7 +200,7 @@ export default function LocaleLanding({
               </ul>
               <div className="flex flex-wrap gap-3">
                 <Button asChild>
-                  <Link href="#contact">{about.ctaPrimary}</Link>
+                  <Link href={contactHref}>{about.ctaPrimary}</Link>
                 </Button>
                 <Button asChild variant="outline">
                   <Link href="#services">{about.ctaSecondary}</Link>
@@ -222,7 +223,7 @@ export default function LocaleLanding({
               </div>
               <div className="flex flex-wrap gap-3 pt-2">
                 <Button asChild>
-                  <Link href="#contact">{about.ctaPrimary}</Link>
+                  <Link href={contactHref}>{about.ctaPrimary}</Link>
                 </Button>
                 <Button asChild variant="outline">
                   <Link href="#services">{about.ctaSecondary}</Link>

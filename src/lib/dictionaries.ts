@@ -141,12 +141,40 @@ export type FooterContent = {
   copyright: string;
 };
 
+export type ContactContent = {
+  hero: {
+    badge: string;
+    title: string;
+    subtitle: string;
+    phoneCta: string;
+    emailCta: string;
+  };
+  offices: {
+    title: string;
+    subtitle: string;
+    locations: { id: string; name: string; address: string }[];
+  };
+  channels: {
+    title: string;
+    description: string;
+    items: { label: string; value: string; href: string; helper?: string }[];
+  };
+  sectionCta: {
+    eyebrow: string;
+    heading: string;
+    description: string;
+    primary: string;
+    secondary: string;
+  };
+};
+
 export type Dictionary = {
   locale: Locale;
   brandName: string;
   nav: NavContent;
   footer: FooterContent;
   home: HomeContent;
+  contact: ContactContent;
   pricing: PricingContent;
   languageLabel: string;
   languageButton: string;
@@ -297,6 +325,56 @@ const dictionaries: Record<Locale, Dictionary> = {
             href: "#case-7"
           }
         ]
+      }
+    },
+    contact: {
+      hero: {
+        badge: "联系我们",
+        title: "纽约 / 加州 双执照律师团队",
+        subtitle: "提供预约、电话与邮箱咨询，1 个工作日内回复。",
+        phoneCta: "拨打电话",
+        emailCta: "发送邮件"
+      },
+      offices: {
+        title: "办公室与邮寄地址",
+        subtitle: "仅限预约来访，可提供线上会议。",
+        locations: [
+          {
+            id: "ny",
+            name: "纽约办公室",
+            address: "60-20 Woodside Ave Suite 205, Woodside, NY 11377"
+          },
+          {
+            id: "ca",
+            name: "加州办公室",
+            address: "7515 Irvine Center Dr Suite 130, Irvine, CA 92618"
+          }
+        ]
+      },
+      channels: {
+        title: "即时联系方式",
+        description: "请简述需求和时间安排，我们将在 1 个工作日内回应。",
+        items: [
+          {
+            label: "电话",
+            value: "949-213-5199",
+            href: "tel:9492135199",
+            helper: "工作日 9am - 6pm，可短信"
+          },
+          {
+            label: "邮箱",
+            value: "alextian@apexbrg.com",
+            href: "mailto:alextian@apexbrg.com",
+            helper: "24 小时内回复，附背景材料更快"
+          }
+        ]
+      },
+      sectionCta: {
+        eyebrow: "预约咨询",
+        heading: "半小时免费初步评估",
+        description: "发送您的简要背景与目标，我们将给出可行路径与下一步建议。",
+        primary: "立即预约",
+        secondary: "查看案例"
       }
     },
     pricing: {
@@ -730,6 +808,56 @@ const dictionaries: Record<Locale, Dictionary> = {
             href: "#case-7"
           }
         ]
+      }
+    },
+    contact: {
+      hero: {
+        badge: "Contact",
+        title: "Dual-licensed in New York & California",
+        subtitle: "Book a consult or share your matter; we respond within one business day.",
+        phoneCta: "Call Now",
+        emailCta: "Email Us"
+      },
+      offices: {
+        title: "Offices & Mailing",
+        subtitle: "By appointment only; virtual meetings available.",
+        locations: [
+          {
+            id: "ny",
+            name: "New York Office",
+            address: "60-20 Woodside Ave Suite 205, Woodside, NY 11377"
+          },
+          {
+            id: "ca",
+            name: "California Office",
+            address: "7515 Irvine Center Dr Suite 130, Irvine, CA 92618"
+          }
+        ]
+      },
+      channels: {
+        title: "Direct Lines",
+        description: "Tell us your goals and timing so we can prepare next steps.",
+        items: [
+          {
+            label: "Phone",
+            value: "949-213-5199",
+            href: "tel:9492135199",
+            helper: "Weekdays 9am-6pm; text for urgent matters"
+          },
+          {
+            label: "Email",
+            value: "alextian@apexbrg.com",
+            href: "mailto:alextian@apexbrg.com",
+            helper: "Replies within 24 hours; include background for faster review"
+          }
+        ]
+      },
+      sectionCta: {
+        eyebrow: "Get Started",
+        heading: "Book a consult in minutes",
+        description: "First 30 minutes are free; longer calls at $300/hour if needed.",
+        primary: "Book a Call",
+        secondary: "View Case Results"
       }
     },
     pricing: {

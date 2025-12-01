@@ -22,6 +22,7 @@ export default function ServicesPage({ params }: PageProps) {
     categories[0]?.id ?? "employment"
   );
 
+  const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const anchor = (hash: string) => ({
     pathname: `/${locale}`,
     hash: hash.startsWith("#") ? hash.slice(1) : hash
@@ -51,7 +52,7 @@ export default function ServicesPage({ params }: PageProps) {
             </p>
             <div className="flex flex-wrap gap-3">
               <Button asChild size="lg">
-                <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary}</Link>
+                <Link href={contactHref}>{pricing.hero.ctaPrimary}</Link>
               </Button>
               <Button asChild variant="outline" size="lg">
                 <Link href={anchor("#cases")}>{pricing.hero.ctaSecondary}</Link>
@@ -123,7 +124,7 @@ export default function ServicesPage({ params }: PageProps) {
                 <p className="mt-1 text-sm text-slate-600">{current.description}</p>
               </div>
               <Button asChild variant="ghost" className="px-0 text-sm">
-                <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary} →</Link>
+                <Link href={contactHref}>{pricing.hero.ctaPrimary} →</Link>
               </Button>
             </div>
 
@@ -205,7 +206,7 @@ export default function ServicesPage({ params }: PageProps) {
 
         <SectionCta
           content={pricing.sectionCta}
-          primaryHref={anchor("#contact")}
+          primaryHref={contactHref}
           secondaryHref={anchor("#services")}
         />
       </div>

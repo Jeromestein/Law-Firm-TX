@@ -19,6 +19,7 @@ export function SiteHeader({ locale }: HeaderProps) {
     pathname: `/${locale}`,
     hash: hash.startsWith("#") ? hash.slice(1) : hash
   });
+  const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const [open, setOpen] = useState(false);
 
   const navLinks = [
@@ -66,7 +67,7 @@ export function SiteHeader({ locale }: HeaderProps) {
               </Link>
             ))}
             <Button asChild className="px-5 py-2 text-sm font-bold">
-              <Link href={anchor("#contact")}>{dictionary.nav.consult}</Link>
+              <Link href={contactHref}>{dictionary.nav.consult}</Link>
             </Button>
           </div>
           <div className="ml-1">
@@ -92,7 +93,7 @@ export function SiteHeader({ locale }: HeaderProps) {
               className="w-full justify-center px-3 py-3 text-sm font-semibold tracking-[0.08em]"
               onClick={() => setOpen(false)}
             >
-              <Link href={anchor("#contact")}>{dictionary.nav.consult}</Link>
+              <Link href={contactHref}>{dictionary.nav.consult}</Link>
             </Button>
           </div>
         </div>
