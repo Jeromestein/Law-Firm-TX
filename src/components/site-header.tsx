@@ -25,7 +25,7 @@ export function SiteHeader({ locale }: HeaderProps) {
     { href: anchor("#top"), label: dictionary.nav.home },
     { href: anchor("#about"), label: dictionary.nav.about },
     { href: anchor("#services"), label: dictionary.nav.services },
-    { href: anchor("#cases"), label: dictionary.nav.cases },
+    { href: { pathname: `/${locale}/cases` }, label: dictionary.nav.cases },
     { href: { pathname: `/${locale}/services` }, label: dictionary.nav.pricing }
   ];
 

@@ -78,7 +78,7 @@ export default function ServicesPage({ params }: PageProps) {
           <p className="text-sm text-slate-600">{pricing.categoriesIntro.description}</p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-4 shadow-sm">
+        <div id="categories" className="flex flex-wrap items-center justify-center gap-3 rounded-sm bg-white p-4 shadow-sm">
           {categories.map((category) => (
             <button
               key={category.id}

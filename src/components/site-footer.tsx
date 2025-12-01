@@ -54,10 +54,10 @@ export function SiteFooter({ locale }: FooterProps) {
             </li>
             <li>
               <Link
-                href={anchor("#services")}
+                href={{ pathname: `/${locale}/cases` }}
                 className="transition hover:text-gold"
               >
-                {dictionary.footer.ipoLink}
+                {dictionary.nav.cases}
               </Link>
             </li>
             <li>
