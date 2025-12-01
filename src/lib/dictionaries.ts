@@ -216,13 +216,13 @@ const dictionaries: Record<Locale, Dictionary> = {
       quote: "“法律不仅是规则，更是商业世界的战略艺术。”",
       imageAlt: "Alex Tian 律师肖像",
         body1:
-          "毕业于世界顶尖法学院 New York University (NYU) 与 University of Minnesota。拥有跨越东西方资本市场的独特视野。",
+          "Alex Tian 律师持有纽约与加州执业资格，主攻证券发行（IPO、SPAC、私募）、跨境并购以及高端移民（含 EB-5 投资、EB-1C/L-1 跨国高管、EB-1A 杰出人才）。为计划赴美上市、募资或进行资产全球化配置的企业与投资人提供全流程策略与合规支持。",
         body2:
-          "不同于传统律师，我们深谙商业运作的底层逻辑。无论是协助独角兽企业赴美上市，还是为高净值家庭规划复杂的跨境身份，我们都以“极致严谨”与“策略先行”著称。",
+          "毕业于纽约大学与明尼苏达大学法学院（优等 J.D.，证券规制/公司治理/国际法方向），并在哈佛肯尼迪学院进修。曾任汤森路透证券法规研究员与医疗信息化顾问；现为北京千颂科技研究总监，主导医药并购与跨境技术许可，拥有两项数据安全/数据共享专利，并发表多篇 IEEE 论文，致力于以生物科技与数据思维设计兼具创新与合规的资本与移民方案。",
         bullets: [
-          "拥有中美两地法律从业资格",
-          "专注 IPO 资本运作与 SEC 合规",
-          "解决疑难复杂的高端移民案件"
+          "纽约 + 加州执照，专注美股发行、SPAC、跨境并购",
+          "擅长 EB-5、EB-1C/L-1 高管调动与 EB-1A 杰出人才方案",
+          "数据/生物科技背景，研究总监并拥两项数据安全/共享专利"
         ],
         ctaPrimary: "预约咨询",
         ctaSecondary: "查看服务"
@@ -649,13 +649,13 @@ const dictionaries: Record<Locale, Dictionary> = {
       quote: "“Law is not just rules—it is the strategy of business.”",
       imageAlt: "Portrait of Alex Tian, Esq.",
         body1:
-          "Graduate of top law schools New York University (NYU) and the University of Minnesota with a cross-border capital markets lens.",
+          "Xin (Alex) Tian is admitted in New York and California. He focuses on securities offerings (IPOs, SPACs, private placements), cross-border M&A, and premium immigration, including EB-5 investors, multinational executive transfers (L-1/EB-1C), and extraordinary ability cases. He counsels companies and investors raising capital, listing in the U.S., or structuring global asset allocations.",
         body2:
-          "We think in business logic, not paperwork. From taking unicorns public to structuring complex cross-border status plans for HNW families, we lead with rigor and strategy.",
+          "He holds an M.S. in Biology from New York University and a J.D., cum laude, from the University of Minnesota Law School (concentration in securities regulation, corporate governance, and international law), with further study at Harvard Kennedy School. Previously, he researched U.S. securities law at Thomson Reuters and consulted on electronic health records. Since 2018, as Research Director at Beijing Qiansong Tech Development Co., Ltd., he has led pharmaceutical acquisitions and cross-border tech licensing, earning two patents in data security and data sharing. He has published in IEEE venues and integrates biotech, data science, and law to design innovative, compliance-ready capital and immigration solutions.",
         bullets: [
-          "Licensed in both China and the U.S.",
-          "Focused on IPO capital work and SEC compliance",
-          "Experts in complex, high-stakes immigration matters"
+          "Admitted in New York and California; focuses on IPOs, SPACs, and cross-border M&A",
+          "Builds high-end immigration strategies for EB-5, L-1/EB-1C executives, and extraordinary ability",
+          "Data/biotech background as research director with two data security/sharing patents and IEEE publications"
         ],
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "View Services"
