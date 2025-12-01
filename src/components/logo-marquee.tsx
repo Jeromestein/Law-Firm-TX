@@ -36,7 +36,7 @@ export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
                 {items.map((item) => (
                   <div
                     key={`${loopIndex}-${item.name}`}
-                    className="flex h-12 min-w-[260px] items-center gap-4 whitespace-nowrap lg:min-w-[280px]"
+                    className="flex min-w-[160px] items-center gap-1 lg:min-w-[160px]"
                   >
                     <Image
                       src={item.logo}
@@ -46,7 +46,7 @@ export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
                       className="h-12 w-auto object-contain"
                       draggable={false}
                     />
-                    <span className="text-sm font-semibold text-white">
+                    <span className="max-w-[120px] text-sm font-semibold leading-tight text-white break-words">
                       {item.name}
                     </span>
                   </div>
