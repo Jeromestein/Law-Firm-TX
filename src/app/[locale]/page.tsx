@@ -299,9 +299,6 @@ export default function LocaleLanding({
                     <li key={item}>• {item}</li>
                   ))}
                 </ul>
-                <Button variant="ghost" className="border-b border-gold px-0">
-                  {service.label} →
-                </Button>
               </article>
             ))}
           </div>
@@ -325,7 +322,7 @@ export default function LocaleLanding({
               <p className="text-slate-500">{casesSection.subtitle}</p>
             </div>
             <Link
-              href="#"
+              href={`/${locale}/cases`}
               className="hidden text-sm font-bold text-primary transition hover:text-gold md:block"
             >
               {casesSection.viewAll}
@@ -357,9 +354,12 @@ export default function LocaleLanding({
                     {item.title}
                   </h3>
                   <p className="mb-4 text-sm text-slate-500">{item.body}</p>
-                  <span className="border-b border-slate-300 pb-1 text-sm font-bold text-primary">
-                    阅读详情
-                  </span>
+                  <Link
+                    href={{ pathname: `/${locale}/cases`, hash: item.href.replace(/^#/, "") }}
+                    className="border-b border-slate-300 pb-1 text-sm font-bold text-primary"
+                  >
+                    {casesSection.readMore}
+                  </Link>
                 </div>
               </article>
             ))}

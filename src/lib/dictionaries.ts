@@ -22,6 +22,7 @@ export type CaseStudy = {
   color: string;
   body: string;
   image: string;
+  href: string;
 };
 
 export type HomeContent = {
@@ -76,6 +77,7 @@ export type HomeContent = {
     title: string;
     subtitle: string;
     viewAll: string;
+    readMore: string;
     studies: CaseStudy[];
   };
 };
@@ -265,30 +267,34 @@ const dictionaries: Record<Locale, Dictionary> = {
         ]
       },
       casesSection: {
-        title: "近期成功案例",
-        subtitle: "用结果说话，用专业护航",
-        viewAll: "查看全部 →",
+        title: "精选成功案例",
+        subtitle: "能经得起审查的结果",
+        viewAll: "查看全部案例 →",
+        readMore: "阅读详情",
         studies: [
           {
-            title: "某科技独角兽纳斯达克上市",
-            tag: "IPO",
-            color: "bg-gold text-primary",
-            body: "历时8个月，解决复杂的VIE架构重组问题，成功通过SEC多轮问询。",
-            image: "/ppl-typing.jpeg"
-          },
-          {
-            title: "著名艺术家 EB-1A 无补件获批",
-            tag: "移民",
+            title: "EB-1A 医学 · 3 天极速获批",
+            tag: "EB-1A · 医学",
             color: "bg-primary text-white",
-            body: "针对客户媒体报道不足的弱点，重新挖掘其作品的商业价值与行业影响力。",
-            image: "/eb-1a-green-card.jpg"
+            body: "主任医师 + 医博，证据分散，重组卓越主线，3 天无补件获批。",
+            image: "/cases/eb1Doctor.jpg",
+            href:"#case-1"
           },
           {
-            title: "跨境医疗集团 5000万美金收购案",
-            tag: "并购",
+            title: "SEC 合规数字发行助力纳斯达克",
+            tag: "资本市场 · 数字资产",
             color: "bg-gold text-primary",
-            body: "主导尽职调查与交易结构设计，规避了潜在的税务风险与合规漏洞。",
-            image: "/ppl-presenting.jpeg"
+            body: "Howey 测试 + Reg D/Reg S 设计，整合控股平台并成功美股上市。",
+            image: "/cases/capitalDigital.webp",
+            href: "#case-5"
+          },
+          {
+            title: "亡配偶自请 + 极端困难无补件获批",
+            tag: "I-360 亡配偶 · I-485",
+            color: "bg-primary text-white",
+            body: "长时间无身份，亡配偶递交 I-360 + I-485，极端困难论证获接受。",
+            image: "/cases/widowWaiver.jpg",
+            href: "#case-7"
           }
         ]
       }
@@ -694,30 +700,34 @@ const dictionaries: Record<Locale, Dictionary> = {
         ]
       },
       casesSection: {
-        title: "Recent Results",
-        subtitle: "Let outcomes speak. Strategy protects.",
-        viewAll: "View all →",
+        title: "Case Results",
+        subtitle: "Outcomes built to withstand scrutiny.",
+        viewAll: "See all cases →",
+        readMore: "Read details",
         studies: [
           {
-            title: "Tech Unicorn Listed on Nasdaq",
-            tag: "IPO",
-            color: "bg-gold text-primary",
-            body: "8-month sprint. Restructured VIE and cleared multiple SEC comment rounds.",
-            image: "/ppl-typing.jpeg"
-          },
-          {
-            title: "Artist EB-1A Approved with No RFE",
-            tag: "Immigration",
+            title: "EB-1A · Medicine — Approved in 3 Days",
+            tag: "EB-1A · Medicine",
             color: "bg-primary text-white",
-            body: "Positioned limited media coverage as commercial impact and industry influence.",
-            image: "/eb-1a-green-card.jpg"
+            body: "Chief physician + Ph.D.; reorganized fragmented evidence into a crisp EB-1A story, approved with no RFE.",
+            image: "/cases/eb1Doctor.jpg",
+            href: "#case-1"
           },
           {
-            title: "$50M Cross-Border Healthcare Acquisition",
-            tag: "M&A",
+            title: "SEC-Compliant Digital Offerings to Nasdaq",
+            tag: "Capital Markets · Digital Assets",
             color: "bg-gold text-primary",
-            body: "Led diligence and structure to mitigate tax exposure and compliance gaps.",
-            image: "/ppl-presenting.jpeg"
+            body: "Howey analyses plus Reg D/Reg S structures; consolidated issuers into a holding company and listed on Nasdaq.",
+            image: "/cases/capitalDigital.webp",
+            href: "#case-5"
+          },
+          {
+            title: "Widow Self-Petition + Extreme Hardship Approved",
+            tag: "I-360 Widow · I-485",
+            color: "bg-primary text-white",
+            body: "Long unlawful presence; filed I-360/I-485 with extreme-hardship and discretion arguments accepted without RFE.",
+            image: "/cases/widowWaiver.jpg",
+            href: "#case-7"
           }
         ]
       }
