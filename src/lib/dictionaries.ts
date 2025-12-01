@@ -189,7 +189,7 @@ const dictionaries: Record<Locale, Dictionary> = {
           "我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。",
         ctaPrimary: "预约咨询",
         ctaSecondary: "探索业务",
-      note: "咨询：半小时内免费，超过半小时按 $200/小时 收费"
+      note: "咨询：半小时内免费，超过半小时按 $300/小时 收费"
     },
     education: {
       title: "精英教育背景与资质",
@@ -226,7 +226,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         ctaSecondary: "查看服务"
       },
       aboutPartner: {
-        role: "合伙人",
+        role: "Off-Counsel",
         title: "Yilei Huang, Esq.",
         imageAlt: "Yilei Huang 律师照片",
         paragraphs: [
@@ -298,7 +298,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         badgeLeft: "透明报价",
         badgeRight: "即刻规划",
         heading: "核心服务与费用一览",
-        body: "30 分钟内咨询免费，超过部分按 $200/小时计费。 所有费用为参考价，具体以个案评估为准。",
+        body: "30 分钟内咨询免费，超过部分按 $300/小时计费。 所有费用为参考价，具体以个案评估为准。",
         ctaPrimary: "预约咨询",
         ctaSecondary: "查看案例",
         promiseTitle: "我们的承诺",
@@ -618,7 +618,7 @@ const dictionaries: Record<Locale, Dictionary> = {
           "We deliver more than legal advice—we build your bridge to the future with deep U.S. training and battle-tested experience. The bridge that lets clients rest easy • your safe crossing over legal challenges.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "Explore Services",
-      note: "Consultations: first 30 minutes free, then $200/hour"
+      note: "Consultations: first 30 minutes free, then $300/hour"
     },
     education: {
       title: "Education & Credentials",
@@ -655,7 +655,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         ctaSecondary: "View Services"
       },
       aboutPartner: {
-        role: "Partner",
+        role: "Off-Counsel",
         title: "Yilei Huang, Esq.",
         imageAlt: "Portrait of Yilei Huang, Esq.",
         paragraphs: [
@@ -727,7 +727,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         badgeLeft: "Transparent Pricing",
         badgeRight: "Start Planning",
         heading: "Core Services & Fees",
-        body: "First 30 minutes are free; afterward $200/hour. Fees are reference only—final quotes follow case review.",
+        body: "First 30 minutes are free; afterward $300/hour. Fees are reference only—final quotes follow case review.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "View Cases",
         promiseTitle: "Our Promise",
