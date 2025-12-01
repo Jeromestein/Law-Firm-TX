@@ -7,6 +7,7 @@ export type CaseEntry = {
   challenge: string;
   strategy: string[];
   result: string[];
+  image: string;
 };
 
 export type CaseSection = {
@@ -22,6 +23,17 @@ export type CasesPageContent = {
     subtitle: string;
   };
   sections: CaseSection[];
+};
+
+const caseImages = {
+  eb1Doctor: "/eb-1a-green-card.jpg",
+  eb1Artist: "/ppl-presenting.jpeg",
+  eb1Musician: "/tx_profile.jpg",
+  eb1Coach: "/ppl-typing.jpeg",
+  capitalDigital: "/ppl-presenting.jpeg",
+  healthcareIpo: "/ppl-typing.jpeg",
+  widowWaiver: "/hyl-profile.jpg",
+  hardshipWaiver: "/eb-1a-green-card.jpg"
 };
 
 const casesContent: Record<Locale, CasesPageContent> = {
@@ -43,6 +55,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Chief physician at Capital Medical University with a Ph.D. from Tsinghua University; led graduate students with award-winning research, extensive publications, and repeated mainstream media features.",
             challenge:
               "Achievements were fragmented across hospitals, institutes, and publications; needed a concise extraordinary-ability narrative officers could grasp fast.",
+            image: caseImages.eb1Doctor,
             strategy: [
               "Curated top research awards and grants and tied them to concrete clinical innovations.",
               "Highlighted graduate advising; used students’ national prizes as secondary proof of influence.",
@@ -61,6 +74,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Pioneering artist of the “Mongolian grassland” school; multiple U.S. and international exhibitions; several published art books and curated collections.",
             challenge:
               "Recognition centered on exhibitions and reviews, not patents or citations; needed to show artistic influence met EB-1A standards.",
+            image: caseImages.eb1Artist,
             strategy: [
               "Documented solo/group shows with invitations from recognized galleries and institutions.",
               "Collected catalog prefaces, reviews, and curators’ commentary to prove standing and originality.",
@@ -79,6 +93,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Distinguished erhu performer; played in orchestra under Maestro Seiji Ozawa; Japanese national of Chinese origin with mainstream print-media features.",
             challenge:
               "Evidence spanned China, Japan, and the U.S.; needed a coherent cross-border record linking performances to major orchestras and media.",
+            image: caseImages.eb1Musician,
             strategy: [
               "Centered her role in Ozawa’s orchestra as proof of top-tier performance credentials.",
               "Organized print and specialty music coverage with circulation and reputation highlighted.",
@@ -97,6 +112,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "National-level swimming champion with major titles and official media; post-retirement became a coach producing Olympic, World Championship, and National Games gold medalists.",
             challenge:
               "Filed as a coach, not an active athlete; needed to prove coaching is a natural extension of extraordinary athletic ability.",
+            image: caseImages.eb1Coach,
             strategy: [
               "Presented national rankings, medals, and authority certifications as past extraordinary proof.",
               "Showed coaching outcomes—training Olympic/World champions—as ongoing top-tier impact.",
@@ -120,6 +136,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Advised multiple token issuers seeking ICO-style offerings under U.S. securities scrutiny, with a goal to consolidate projects into a holding company and list on Nasdaq.",
             challenge:
               "Avoid unregistered offerings, align structure and disclosures with SEC expectations, and preserve a path to a regulated IPO.",
+            image: caseImages.capitalDigital,
             strategy: [
               "Ran Howey analyses to classify each token (security vs. utility) and picked compliant paths.",
               "Designed Reg D/Reg S structures with PPMs, subscriptions, and risk factors tailored to digital assets.",
@@ -138,6 +155,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "California senior-care group combining day-care, assisted living, high-end dementia and Alzheimer’s care; ~$50M annual revenue; aimed to be the first Nasdaq-listed Chinese elder-care concept stock.",
             challenge:
               "Consolidate varied operating entities, satisfy healthcare and securities rules, and explain the Chinese elder-care model to U.S. investors.",
+            image: caseImages.healthcareIpo,
             strategy: [
               "Led restructuring to merge multiple operators into one holding company with clean ownership, licenses, and reporting.",
               "Prepared IPO-ready financials, risk factors, and business descriptions covering patient mix and regulation.",
@@ -161,6 +179,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Arrived at 16, long-term undocumented restaurant worker; married a U.S. citizen who died before a marriage case was filed; limited English, income, and status.",
             challenge:
               "Long unlawful presence, no pending I-130, and need to persuade USCIS under extreme hardship and discretion despite violations.",
+            image: caseImages.widowWaiver,
             strategy: [
               "Filed I-360 widow self-petition as an immediate relative within statutory timelines.",
               "Filed I-485 with candid inadmissibility analysis on unlawful presence/work and discretionary arguments.",
@@ -179,6 +198,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "Mixed-status family; U.S. citizen child with intellectual and physical disabilities treated at MGH; father entered EWI and accrued unlawful presence.",
             challenge:
               "Needed consular processing with multiple inadmissibility grounds; required coordinated I-601A and I-212 to avoid prolonged family separation.",
+            image: caseImages.hardshipWaiver,
             strategy: [
               "Mapped inadmissibility under INA 212(a) and triggered bars; chose provisional I-601A while in the U.S.",
               "Argued extreme hardship to the U.S. citizen spouse, documenting the disabled child’s dependence.",
@@ -211,6 +231,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "首都医科大学主任医师，清华大学医学博士；带教研究生获奖多项，发表大量论文，多次登上主流媒体。",
             challenge:
               "成就在不同医院、课题、论文中分散，需要在极短篇幅内让移民官看懂她的“卓越能力”主线。",
+            image: caseImages.eb1Doctor,
             strategy: [
               "精选科研奖励与课题，直接对应临床创新成果。",
               "凸显研究生导师身份，用学生获奖作为学术影响力的佐证。",
@@ -229,6 +250,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "蒙古草原派画风创派艺术家，多次在美国及海外办展，出版多本画册与艺术专著。",
             challenge:
               "艺术领域缺少专利/引用等硬指标，需要把展览、评论、收藏转化为移民官认可的卓越能力证据。",
+            image: caseImages.eb1Artist,
             strategy: [
               "系统整理重要个展与联展，强调受邀方为专业画廊/博物馆/文化机构。",
               "收集策展人、评论家前言与评论，证明独特风格与学术地位。",
@@ -247,6 +269,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "知名二胡演奏家，曾在小泽征尔乐团演出；日籍华人，多家主流纸媒与音乐杂志专题报道。",
             challenge:
               "证据跨中日美三地，需要将演出记录与权威乐团、媒体报道连成清晰世界级履历。",
+            image: caseImages.eb1Musician,
             strategy: [
               "以在小泽征尔乐团的身份为核心，证明处于演艺金字塔尖。",
               "整理纸媒与专业音乐杂志报道，并强调发行量与影响力。",
@@ -265,6 +288,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "国内顶尖游泳运动员，获多枚金牌并多次登上官方体育媒体；退役后培养出奥运会、世锦赛、全运会冠军。",
             challenge:
               "以教练身份申报，需要说服移民局：教练事业是卓越运动能力的延伸，而非换行。",
+            image: caseImages.eb1Coach,
             strategy: [
               "呈现运动员时期的官方排名、奖牌与认证，证明过往卓越能力。",
               "用弟子获得奥运/世锦赛冠军作为“教练维度”的顶尖影响力。",
@@ -288,6 +312,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "为多家代币发行商提供合规 ICO/代币发行设计，将多个项目整合为控股公司并规划纳斯达克上市。",
             challenge:
               "监管收紧，代币可能被认定为证券；需规避“未注册发行”风险并为未来 IPO 留出合规路径。",
+            image: caseImages.capitalDigital,
             strategy: [
               "逐一进行 Howey 测试与证券属性分析，选择合规发行路径。",
               "设计 Reg D / Reg S 架构，起草面向数字资产的 PPM、认购与风险披露。",
@@ -306,6 +331,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "整合加州多家老人日托、养老院、失智与阿尔兹海默症护理中心；年营收约 5000 万美元，定位首个华人养老概念股。",
             challenge:
               "整合不同机构与牌照，兼顾医疗/养老监管与证券法，并向美方投资人清晰讲好华人养老的商业与合规逻辑。",
+            image: caseImages.healthcareIpo,
             strategy: [
               "主导架构重组，统一控股平台，理顺股权、牌照与财务报表线。",
               "与管理层和审计合作，编制 IPO 级财报与风险揭示，清晰描述业务与监管环境。",
@@ -329,6 +355,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "16 岁来美，长期无身份在餐馆工作；与美国公民结婚后，配偶尚未递交婚姻移民即去世；英语与收入有限。",
             challenge:
               "长期非法滞留且无已批 I-130，需在极端困难与裁量标准下说服移民局放行。",
+            image: caseImages.widowWaiver,
             strategy: [
               "依据法规递交 I-360 亡配偶自请，归类直系亲属。",
               "同步递交 I-485，正面回应非法滞留与无证工作并陈述裁量理由。",
@@ -347,6 +374,7 @@ const casesContent: Record<Locale, CasesPageContent> = {
               "混合身份家庭；美籍子女兼有智力与肢体障碍，在麻省总医院长期治疗；父亲以非法入境方式进入美国并累积超期滞留。",
             challenge:
               "需走领馆移民签证，面对多重不予准入事由；必须用 I-601A + I-212 协同，尽量减少家庭分离时间。",
+            image: caseImages.hardshipWaiver,
             strategy: [
               "梳理 INA 212(a) 不予准入条款与触发点，选择在美先行 I-601A。",
               "以美籍配偶为合格亲属论证极端困难，并详述残障子女对父亲的依赖。",
