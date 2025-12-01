@@ -164,11 +164,6 @@ export default function ServicesPage({ params }: PageProps) {
                       </li>
                     ))}
                   </ul>
-                  <div className="border-t border-slate-100 p-4">
-                    <Button asChild className="w-full">
-                      <Link href={anchor("#contact")}>{pricing.hero.ctaPrimary}</Link>
-                    </Button>
-                  </div>
                 </div>
               ))}
             </div>
