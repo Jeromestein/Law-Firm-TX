@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { SectionCta } from "@/components/section-cta";
@@ -17,6 +18,26 @@ export default function CasesPage({ params }: PageProps) {
   const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
   const casesPage = getCasesContent(locale);
   const dictionary = getDictionary(locale);
+  const [activeSection, setActiveSection] = useState<string>(
+    casesPage.sections[0]?.title ?? ""
+  );
+  const currentSection = useMemo(
+    () => casesPage.sections.find((s) => s.title === activeSection) ?? casesPage.sections[0],
+    [activeSection, casesPage.sections]
+  );
+  const currentSectionIndex = useMemo(
+    () => casesPage.sections.findIndex((s) => s.title === currentSection?.title),
+    [casesPage.sections, currentSection?.title]
+  );
+  const sectionOffsets = useMemo(() => {
+    const offsets: Record<string, number> = {};
+    let offset = 0;
+    casesPage.sections.forEach((section) => {
+      offsets[section.title] = offset;
+      offset += section.cases.length;
+    });
+    return offsets;
+  }, [casesPage.sections]);
   const labels =
     locale === "zh"
       ? {
@@ -39,6 +60,37 @@ export default function CasesPage({ params }: PageProps) {
 
   const sectionId = (title: string) =>
     `case-${title.toLowerCase().replace(/[^a-z0-9]+/gi, "-").replace(/(^-|-$)/g, "")}`;
+  const caseAnchor = (sectionTitle: string, caseIndex: number) => {
+    const base = sectionOffsets[sectionTitle] ?? 0;
+    return `case-${base + caseIndex + 1}`;
+  };
+
+  useEffect(() => {
+    const syncFromHash = (hashValue: string) => {
+      const hash = hashValue.startsWith("#") ? hashValue.slice(1) : hashValue;
+      if (!hash.startsWith("case-")) return;
+      const index = Number.parseInt(hash.replace("case-", ""), 10);
+      if (Number.isNaN(index) || index < 1) return;
+      let cursor = 0;
+      for (const section of casesPage.sections) {
+        const nextCursor = cursor + section.cases.length;
+        if (index >= cursor + 1 && index <= nextCursor) {
+          setActiveSection(section.title);
+          // wait for render then scroll target into view
+          setTimeout(() => {
+            const el = document.getElementById(hash);
+            el?.scrollIntoView({ behavior: "smooth", block: "start" });
+          }, 0);
+          break;
+        }
+        cursor = nextCursor;
+      }
+    };
+    syncFromHash(window.location.hash);
+    const onHashChange = () => syncFromHash(window.location.hash);
+    window.addEventListener("hashchange", onHashChange);
+    return () => window.removeEventListener("hashchange", onHashChange);
+  }, [casesPage.sections]);
 
   return (
     <main className="bg-slate-50 text-slate-800" lang={locale}>
@@ -78,26 +130,37 @@ export default function CasesPage({ params }: PageProps) {
           <p className="text-sm text-slate-600 md:text-base">{casesPage.hero.subtitle}</p>
         </div>
 
-        <div className="flex flex-wrap items-center justify-center gap-3">
+        {/* Anchor pills linking to each section */}
+        <div
+          id="case-sections"
+          className="relative flex flex-wrap items-center justify-center gap-3 overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-6 shadow-lg ring-1 ring-slate-200/60"
+        >
           {casesPage.sections.map((section) => (
-            <Link
+            <button
               key={section.title}
-              href={`#${sectionId(section.title)}`}
-              className="group inline-flex items-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-primary transition duration-200 hover:-translate-y-0.5 hover:border-gold/70 hover:bg-gold/5 hover:shadow-sm"
+              type="button"
+              onClick={() => setActiveSection(section.title)}
+              className={`group inline-flex items-center gap-2 rounded-full border px-4 py-2 text-sm font-semibold transition duration-200 ${
+                activeSection === section.title
+                  ? "border-gold bg-gold/10 text-primary shadow-sm"
+                  : "border-slate-200 bg-white text-primary hover:-translate-y-0.5 hover:border-gold/70 hover:bg-gold/5 hover:shadow-sm"
+              }`}
             >
               <span className="h-2 w-2 rounded-full bg-gold transition duration-200 group-hover:scale-110" />
               {section.title}
-            </Link>
+            </button>
           ))}
         </div>
 
+        {/* Each case category rendered as its own section with hero + list */}
         <div className="space-y-12">
-          {casesPage.sections.map((section, sectionIndex) => (
+          {currentSection ? (
             <section
-              key={section.title}
-              id={sectionId(section.title)}
+              key={currentSection.title}
+              id={sectionId(currentSection.title)}
               className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 px-5 py-10 shadow-xl ring-1 ring-slate-200/60 md:px-8"
             >
+              {/* Soft glows behind the section */}
               <div className="pointer-events-none absolute inset-0">
                 <div className="absolute -left-20 top-10 h-64 w-64 rounded-full bg-primary/5 blur-3xl" />
                 <div className="absolute bottom-0 right-0 h-72 w-72 rounded-full bg-gold/10 blur-3xl" />
@@ -109,30 +172,31 @@ export default function CasesPage({ params }: PageProps) {
                   </div>
                   <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
                     <h3 className="text-2xl font-serif font-bold text-primary md:text-3xl">
-                      {section.title}
+                      {currentSection.title}
                     </h3>
-                    {section.description ? (
+                    {currentSection.description ? (
                       <p className="max-w-3xl text-sm text-slate-600 md:text-base">
-                        {section.description}
+                        {currentSection.description}
                       </p>
                     ) : null}
                   </div>
                 </div>
 
                 <div className="space-y-12">
-                  {section.cases.map((entry, caseIndex) => (
+                  {currentSection.cases.map((entry, caseIndex) => (
                     <CaseShowcase
                       key={entry.title}
                       entry={entry}
                       labels={labels}
                       flip={caseIndex % 2 === 1}
-                      accentIndex={sectionIndex + caseIndex}
+                      accentIndex={(currentSectionIndex >= 0 ? currentSectionIndex : 0) + caseIndex}
+                      id={caseAnchor(currentSection.title, caseIndex)}
                     />
                   ))}
                 </div>
               </div>
             </section>
-          ))}
+          ) : null}
         </div>
 
         <SectionCta
@@ -149,12 +213,14 @@ function CaseShowcase({
   entry,
   labels,
   flip,
-  accentIndex
+  accentIndex,
+  id
 }: {
   entry: CaseEntry;
   labels: { background: string; challenge: string; strategy: string; result: string };
   flip?: boolean;
   accentIndex: number;
+  id: string;
 }) {
   const gradients = [
     "from-primary/80 via-slate-900/70 to-slate-900/90",
@@ -163,12 +229,13 @@ function CaseShowcase({
   ];
   const gradient = gradients[accentIndex % gradients.length];
   return (
-    <article className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
+    <article id={id} className="grid grid-cols-1 items-center gap-8 lg:grid-cols-12">
       <div
         className={`relative overflow-hidden rounded-xl bg-slate-900 text-white shadow-2xl ring-1 ring-slate-900/30 ${
           flip ? "lg:order-2" : ""
         } lg:col-span-5`}
       >
+        {/* Colored gradient overlay sits above the image */}
         <div className={`absolute inset-0 bg-gradient-to-br ${gradient}`} />
         <Image
           src={entry.image}
