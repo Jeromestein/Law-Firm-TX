@@ -142,7 +142,7 @@ export type Dictionary = {
 const dictionaries: Record<Locale, Dictionary> = {
   zh: {
     locale: "zh",
-    brandName: "Apex Bridge 顶桥律师事务所",
+    brandName: "Apex Bridge 安桥律师事务所",
     languageLabel: "语言",
     languageButton: "EN / 中文",
     nav: {
@@ -154,7 +154,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       consult: "预约咨询"
     },
     footer: {
-      tagline: "致力于为全球客户提供卓越的法律解决方案。精于资本，专于移民。",
+      tagline: "安桥，让您安心的桥梁，助您跨越法律难题的桥梁。",
       contactTitle: "联系方式",
       losAngeles: "纽约地址：60-20 Woodside Ave Suite 205, Woodside, NY 11377",
       irvine: "加州地址：7515 Irvine Center Dr Suite 130, Irvine, CA 92618",
@@ -593,7 +593,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         heading: "From IPO to",
         highlight: "Global Status Planning",
         subheading:
-          "We deliver more than legal advice—we build your bridge to the future with deep U.S. training and battle-tested experience.",
+          "We deliver more than legal advice—we build your bridge to the future with deep U.S. training and battle-tested experience. The bridge that lets clients rest easy • your safe crossing over legal challenges.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "Explore Services",
         note: "Consultations: first 30 minutes free, then $200/hour"
