@@ -40,6 +40,7 @@ export type HomeContent = {
     minnesota: string;
     usc: string;
     ucla: string;
+    harvard: string;
   };
   about: {
     title: string;
@@ -186,6 +187,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         minnesota: "University of Minnesota",
         usc: "University of Southern California",
         ucla: "University of California, Los Angeles",
+        harvard: "Harvard University",
       },
       about: {
         role: "首席合伙人",
@@ -604,6 +606,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         minnesota: "University of Minnesota",
         usc: "University of Southern California",
         ucla: "Uiniversity of California, Los Angeles",
+        harvard: "Harvard University",
       },
       about: {
         role: "Managing Partner",

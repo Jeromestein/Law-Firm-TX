@@ -40,6 +40,11 @@ export default function LocaleLanding({
       name: education.ucla,
       logo: "/ucla_logo.jpeg",
       alt: "University of California, Los Angeles Logo"
+    },
+    {
+      name: education.harvard,
+      logo: "/harvard_logo.jpeg",
+      alt: "Harvard University Logo"
     }
   ];
 
