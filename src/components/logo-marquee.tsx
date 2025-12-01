@@ -15,7 +15,7 @@ type LogoMarqueeProps = {
 };
 
 export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
-  const sequence = [...items, ...items];
+  const loops = 2;
   const containerClass = [
     "relative overflow-hidden bg-slate-950 py-10 text-white",
     className
@@ -25,26 +25,32 @@ export function LogoMarquee({ items, caption, className }: LogoMarqueeProps) {
 
   return (
     <section className={containerClass} aria-label="Logo marquee">
-      <div className="pointer-events-none absolute left-0 top-0 h-full w-24 bg-gradient-to-r from-slate-950 via-slate-950/90 to-transparent" />
-      <div className="pointer-events-none absolute right-0 top-0 h-full w-24 bg-gradient-to-l from-slate-950 via-slate-950/90 to-transparent" />
-      <div className="mx-auto max-w-6xl px-4">
-        <div className="relative overflow-hidden">
-          <div className="flex min-w-max animate-[marquee_20s_linear_infinite] items-center gap-10 whitespace-nowrap">
-            {sequence.map((item, index) => (
+      <div className="mx-auto max-w-md md:max-w-2xl lg:max-w-4xl px-5 lg:px-12">
+        <div className="relative w-full overflow-hidden before:pointer-events-none before:absolute before:inset-0 before:z-10 before:block before:bg-[linear-gradient(to_right,rgb(4,6,15)_0%,rgba(4,6,15,0.95)_8%,rgba(4,6,15,0.1)_18%,rgba(4,6,15,0)_30%,rgba(4,6,15,0)_70%,rgba(4,6,15,0.1)_82%,rgba(4,6,15,0.95)_92%,rgb(4,6,15)_100%)]">
+          <div className="flex flex-nowrap items-center justify-center gap-6 lg:gap-10">
+            {Array.from({ length: loops }).map((_, loopIndex) => (
               <div
-                key={`${index}-${item.name}`}
-                className="flex min-w-[180px] items-center gap-3 px-2"
+                key={`loop-${loopIndex}`}
+                className="flex w-fit flex-nowrap items-center gap-8 lg:gap-8 animate-[marquee_30s_linear_infinite] will-change-transform motion-reduce:animate-none motion-reduce:will-change-auto"
               >
-                <Image
-                  src={item.logo}
-                  alt={item.alt}
-                  width={40}
-                  height={40}
-                  className="h-10 w-10 object-contain"
-                />
-                <span className="text-sm font-semibold text-white">
-                  {item.name}
-                </span>
+                {items.map((item) => (
+                  <div
+                    key={`${loopIndex}-${item.name}`}
+                    className="flex h-12 min-w-[260px] items-center gap-4 whitespace-nowrap lg:min-w-[280px]"
+                  >
+                    <Image
+                      src={item.logo}
+                      alt={item.alt}
+                      width={56}
+                      height={56}
+                      className="h-12 w-auto object-contain"
+                      draggable={false}
+                    />
+                    <span className="text-sm font-semibold text-white">
+                      {item.name}
+                    </span>
+                  </div>
+                ))}
               </div>
             ))}
           </div>
