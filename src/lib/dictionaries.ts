@@ -600,7 +600,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       consult: "Book a Call"
     },
     footer: {
-      tagline: "Dedicated to delivering exceptional legal solutions. Capital-first, immigration-focused.",
+      tagline: "Apex Bridge, Your safe crossing over legal challenges.",
       contactTitle: "Contact",
       losAngeles: "New York: 60-20 Woodside Ave Suite 205, Woodside, NY 11377",
       irvine: "California: 7515 Irvine Center Dr Suite 130, Irvine, CA 92618",

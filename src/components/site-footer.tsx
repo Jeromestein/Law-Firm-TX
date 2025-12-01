@@ -21,7 +21,7 @@ export function SiteFooter({ locale }: FooterProps) {
     >
       <div className="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-4 text-sm md:grid-cols-4">
         <div className="md:col-span-2">
-          <span className="font-serif text-2xl font-bold tracking-wider text-white">
+          <span className="font-serif text-2xl font-bold tracking-wider text-gold">
             {dictionary.brandName}
           </span>
           <p className="mt-4 max-w-xs">{dictionary.footer.tagline}</p>
