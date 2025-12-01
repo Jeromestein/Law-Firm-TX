@@ -18,7 +18,7 @@ type LogoMarqueeProps = {
 export function LogoMarquee({ items, caption, className, title }: LogoMarqueeProps) {
   const loops = 2;
   const containerClass = [
-    "relative overflow-hidden bg-slate-950 py-10 text-white",
+    "bg-primary py-16 text-white text-white",
     className
   ]
     .filter(Boolean)

@@ -52,7 +52,7 @@ export default function LocaleLanding({
 
   return (
     <main className="relative" lang={locale}>
-      <div
+      <section
         id="top"
         className="relative flex min-h-screen items-center justify-center overflow-hidden bg-primary"
       >
@@ -95,7 +95,7 @@ export default function LocaleLanding({
             {hero.note}
           </p>
         </div>
-      </div>
+      </section>
 
       {/* <section
         id="education"
@@ -145,17 +145,6 @@ export default function LocaleLanding({
           </div>
         </div>
       </section> */}
-
-      <section
-        id="education"
-      > 
-        <LogoMarquee
-          title={education.title}
-          items={schools}
-          caption={educationMarquee.caption}
-        />
-      </section>
-      
 
       <section
         id="about"
@@ -255,6 +244,16 @@ export default function LocaleLanding({
         </div>
       </section>
 
+
+      <section
+        id="education"
+      > 
+        <LogoMarquee
+          title={education.title}
+          items={schools}
+          caption={educationMarquee.caption}
+        />
+      </section>
       <section
         id="services"
         className="bg-primary py-24 text-white"
