@@ -359,7 +359,7 @@ const dictionaries: Record<Locale, Dictionary> = {
             label: "电话",
             value: "949-213-5199",
             href: "tel:9492135199",
-            helper: "工作日 9am - 6pm，可短信"
+            helper: "工作日 9am - 5pm，可短信"
           },
           {
             label: "邮箱",
@@ -842,7 +842,7 @@ const dictionaries: Record<Locale, Dictionary> = {
             label: "Phone",
             value: "949-213-5199",
             href: "tel:9492135199",
-            helper: "Weekdays 9am-6pm; text for urgent matters"
+            helper: "Weekdays 9am-5pm; text for urgent matters"
           },
           {
             label: "Email",
