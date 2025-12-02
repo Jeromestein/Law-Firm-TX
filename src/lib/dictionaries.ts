@@ -246,7 +246,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         body1:
           "Alex Tian 律师持有纽约与加州执业资格，主攻证券发行（IPO、SPAC、私募）、跨境并购以及高端移民（含 EB-5 投资、EB-1C/L-1 跨国高管、EB-1A 杰出人才）。为计划赴美上市、募资或进行资产全球化配置的企业与投资人提供全流程策略与合规支持。",
         body2:
-          "毕业于纽约大学与明尼苏达大学法学院（优等 J.D.，证券规制/公司治理/国际法方向），并在哈佛肯尼迪学院进修。曾任汤森路透证券法规研究员与医疗信息化顾问；现为北京千颂科技研究总监，主导医药并购与跨境技术许可，拥有两项数据安全/数据共享专利，并发表多篇 IEEE 论文，致力于以生物科技与数据思维设计兼具创新与合规的资本与移民方案。",
+          "毕业于纽约大学与明尼苏达大学法学院（优等 J.D.，证券规制/公司治理/国际法方向），并在哈佛肯尼迪学院进修。曾任汤森路透证券法规研究员与医疗信息化顾问；曾任北京千颂科技研究总监，主导医药并购与跨境技术许可，拥有两项数据安全/数据共享专利，并发表多篇 IEEE 论文，致力于以生物科技与数据思维设计兼具创新与合规的资本与移民方案。",
         bullets: [
           "纽约 + 加州执照，专注美股发行、SPAC、跨境并购",
           "擅长 EB-5、EB-1C/L-1 高管调动与 EB-1A 杰出人才方案",
@@ -729,7 +729,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         body1:
           "Xin (Alex) Tian is admitted in New York and California. He focuses on securities offerings (IPOs, SPACs, private placements), cross-border M&A, and premium immigration, including EB-5 investors, multinational executive transfers (L-1/EB-1C), and extraordinary ability cases. He counsels companies and investors raising capital, listing in the U.S., or structuring global asset allocations.",
         body2:
-          "He holds an M.S. in Biology from New York University and a J.D., cum laude, from the University of Minnesota Law School (concentration in securities regulation, corporate governance, and international law), with further study at Harvard Kennedy School. Previously, he researched U.S. securities law at Thomson Reuters and consulted on electronic health records. Since 2018, as Research Director at Beijing Qiansong Tech Development Co., Ltd., he has led pharmaceutical acquisitions and cross-border tech licensing, earning two patents in data security and data sharing. He has published in IEEE venues and integrates biotech, data science, and law to design innovative, compliance-ready capital and immigration solutions.",
+          "He holds an M.S. in Biology from New York University and a J.D., cum laude, from the University of Minnesota Law School (concentration in securities regulation, corporate governance, and international law), with further study at Harvard Kennedy School. Previously, he researched U.S. securities law at Thomson Reuters and consulted on electronic health records. He later served as Research Director at Beijing Qiansong Tech Development Co., Ltd., leading pharmaceutical acquisitions and cross-border tech licensing, earning two patents in data security and data sharing. He has published in IEEE venues and integrates biotech, data science, and law to design innovative, compliance-ready capital and immigration solutions.",
         bullets: [
           "Admitted in New York and California; focuses on IPOs, SPACs, and cross-border M&A",
           "Builds high-end immigration strategies for EB-5, L-1/EB-1C executives, and extraordinary ability",
