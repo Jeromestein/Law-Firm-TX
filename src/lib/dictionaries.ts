@@ -106,6 +106,12 @@ export type CasesPageContent = {
     title: string;
     subtitle: string;
   };
+  labels: {
+    background: string;
+    challenge: string;
+    strategy: string;
+    result: string;
+  };
   sections: CaseSection[];
 };
 
@@ -363,6 +369,12 @@ const dictionaries: Record<Locale, Dictionary> = {
         badge: "成功案例",
         title: "能经得起审查的结果",
         subtitle: "横跨杰出人才、资本市场与数字资产、疑难豁免与人道救济的精选案例，按移民官视角编排。"
+      },
+      labels: {
+        background: "案件背景",
+        challenge: "难点与挑战",
+        strategy: "本所策略",
+        result: "审批结果"
       },
       sections: [
         {
@@ -1026,6 +1038,12 @@ const dictionaries: Record<Locale, Dictionary> = {
         title: "Results that Withstand Scrutiny",
         subtitle:
           "Selected matters across extraordinary ability, capital markets, digital assets, and complex waivers—structured to survive the toughest review."
+      },
+      labels: {
+        background: "Background",
+        challenge: "Challenge",
+        strategy: "Our Strategy",
+        result: "Result"
       },
       sections: [
         {

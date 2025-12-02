@@ -37,20 +37,7 @@ export default function CasesPage({ params }: PageProps) {
     });
     return offsets;
   }, [casesPage.sections]);
-  const labels =
-    locale === "zh"
-      ? {
-          background: "案件背景",
-          challenge: "难点与挑战",
-          strategy: "本所策略",
-          result: "审批结果"
-        }
-      : {
-          background: "Background",
-          challenge: "Challenge",
-          strategy: "Our Strategy",
-          result: "Result"
-        };
+  const labels = casesPage.labels;
 
   const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const anchor = (hash: string) => ({
