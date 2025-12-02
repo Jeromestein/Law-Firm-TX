@@ -2,7 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
-import { LogoMarquee } from "@/components/logo-marquee";
+import { SchoolLogoMarquee } from "@/components/school-logo-marquee";
 import { getDictionary } from "@/lib/dictionaries";
 import { isSupportedLocale } from "@/lib/i18n";
 
@@ -246,15 +246,17 @@ export default function LocaleLanding({
       </section>
 
 
-      <section
-        id="education"
-      > 
-        <LogoMarquee
+      <section id="education">
+        <SchoolLogoMarquee
           title={education.title}
           items={schools}
           caption={educationMarquee.caption}
+          pauseOnHover
+          className="[--duration:20s]"
         />
       </section>
+
+
       <section
         id="services"
         className="bg-primary py-16 text-white"
