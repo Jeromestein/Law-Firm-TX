@@ -9,7 +9,7 @@ export async function generateMetadata({
   params: { locale?: string };
 }): Promise<Metadata> {
   const { locale, dictionary, ogLocale } = getLocaleData(params?.locale);
-  const description = dictionary.home.hero.subheading;
+  const description = `${dictionary.home.hero.subheading} ${dictionary.home.hero.proof}`;
   const baseTitle = dictionary.brandName;
   const fullTitle = `${baseTitle}`;
 

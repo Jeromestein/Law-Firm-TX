@@ -15,7 +15,7 @@ export function generateMetadata({
   const hero = dictionary.home.hero;
   const pageTitle = [hero.heading, hero.highlight].filter(Boolean).join(" ");
   const fullTitle = `${pageTitle} | ${dictionary.brandName}`;
-  const description = hero.subheading;
+  const description = `${hero.subheading} ${hero.proof}`;
 
   return {
     title: pageTitle,
