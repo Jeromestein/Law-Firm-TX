@@ -53,7 +53,17 @@ export default function RootLayout({
   children: React.ReactNode;
   params: { locale?: string };
 }>) {
-  const { locale } = getLocaleData(params?.locale);
+  const { locale, dictionary } = getLocaleData(params?.locale);
+  const creatorSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: dictionary.brandName,
+    inLanguage: locale,
+    creator: {
+      "@type": "Person",
+      email: "mailto:nietsemorej@gmail.com"
+    }
+  };
 
   return (
     <html
@@ -61,6 +71,10 @@ export default function RootLayout({
       suppressHydrationWarning
     >
       <body className="bg-slate-50 text-slate-800 antialiased">
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(creatorSchema) }}
+        />
         {children}
       </body>
     </html>
