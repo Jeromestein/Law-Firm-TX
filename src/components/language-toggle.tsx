@@ -20,7 +20,7 @@ function buildTargetPath(pathname: string | null, targetLocale: Locale) {
   return `/${targetLocale}${suffix}`;
 }
 
-export function LanguageToggle({ locale }: { locale: Locale }) {
+export function LanguageToggle({ locale, hideLabel = false }: { locale: Locale; hideLabel?: boolean }) {
   const router = useRouter();
   const pathname = usePathname();
   const [isPending, startTransition] = useTransition();
@@ -29,6 +29,8 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
   const isZh = locale === "zh";
   const currentLabel = isZh ? "中文" : "English";
   const otherLabel = isZh ? "English" : "中文";
+
+  const buttonLabel = isZh ? "切换到 English" : "Switch to 中文";
 
   const onToggle = () => {
     startTransition(() => {
@@ -45,6 +47,7 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
       onClick={onToggle}
       className="inline-flex items-center gap-1.5 text-xs font-semibold text-white hover:text-gold"
       disabled={isPending}
+      aria-label={buttonLabel}
     >
       <svg
         aria-hidden="true"
@@ -59,10 +62,14 @@ export function LanguageToggle({ locale }: { locale: Locale }) {
         <path d="M12 3c-2 2.3-3.08 5.3-3 9 .08 3.62 1.1 6.64 3 9" />
         <path d="M12 3c2 2.3 3.08 5.3 3 9-.08 3.62-1.1 6.64-3 9" />
       </svg>
-      <span className="inline-flex items-center gap-1.5">
-        <span className="text-gold font-semibold">{currentLabel}</span>
-        <span className="text-white/60">/ {otherLabel}</span>
-      </span>
+      {hideLabel ? (
+        <span className="sr-only">{buttonLabel}</span>
+      ) : (
+        <span className="inline-flex items-center gap-1.5">
+          <span className="font-semibold text-gold">{currentLabel}</span>
+          <span className="text-white/60">/ {otherLabel}</span>
+        </span>
+      )}
     </Button>
   );
 }

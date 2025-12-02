@@ -32,8 +32,8 @@ export function SiteHeader({ locale }: HeaderProps) {
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-primary/90 text-white backdrop-blur-xl">
-      <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:h-18 sm:px-6 lg:px-8">
-        <div className="flex flex-shrink-0 items-center gap-3">
+      <div className="mx-auto flex h-14 max-w-7xl items-center justify-between px-3 sm:h-16 sm:px-6 lg:px-8">
+        <div className="flex min-w-0 flex-shrink-0 items-center gap-3">
           <button
             type="button"
             className="inline-flex items-center justify-center rounded-sm p-2 text-white/80 transition hover:text-gold focus:outline-none focus-visible:ring-2 focus-visible:ring-gold/70 sm:hidden"
@@ -51,11 +51,14 @@ export function SiteHeader({ locale }: HeaderProps) {
               </svg>
             )}
           </button>
-          <Link href={`/${locale}`} className="font-serif text-2xl font-bold tracking-wider text-gold">
+          <Link
+            href={`/${locale}`}
+            className="truncate font-serif text-xl font-bold tracking-wide text-gold sm:text-2xl"
+          >
             {dictionary.brandName}
           </Link>
         </div>
-        <div className="flex items-center gap-3 sm:gap-4">
+        <div className="flex items-center gap-2 sm:gap-4">
           <div className="hidden items-center space-x-4 lg:space-x-6 md:flex">
             {navLinks.map((item) => (
               <Link
@@ -70,8 +73,13 @@ export function SiteHeader({ locale }: HeaderProps) {
               <Link href={contactHref}>{dictionary.nav.consult}</Link>
             </Button>
           </div>
-          <div className="ml-1">
-            <LanguageToggle locale={isSupportedLocale(locale) ? locale : "zh"} />
+          <div className="ml-1 flex-shrink-0">
+            <div className="sm:hidden">
+              <LanguageToggle locale={isSupportedLocale(locale) ? locale : "zh"} hideLabel />
+            </div>
+            <div className="hidden sm:block">
+              <LanguageToggle locale={isSupportedLocale(locale) ? locale : "zh"} />
+            </div>
           </div>
         </div>
       </div>
