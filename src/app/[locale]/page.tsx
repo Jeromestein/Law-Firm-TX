@@ -186,8 +186,8 @@ export default function LocaleLanding({
 
       <section
         id="about"
-            className="bg-slate-50 py-20"
-            aria-labelledby="about-title"
+        className="bg-slate-50 py-20 scroll-mt-[72px]"
+        aria-labelledby="about-title"
       >
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 items-center gap-16 md:grid-cols-2">
@@ -283,7 +283,7 @@ export default function LocaleLanding({
       </section>
 
 
-      <section id="education">
+      <section id="education" className="scroll-mt-[72px]">
         <SchoolLogoMarquee
           title={education.title}
           items={schools}
@@ -296,7 +296,7 @@ export default function LocaleLanding({
 
       <section
         id="services"
-        className="bg-primary py-16 text-white"
+        className="bg-primary py-16 text-white scroll-mt-[72px]"
         aria-labelledby="services-title"
       >
         <div className="mx-auto max-w-7xl px-4">
@@ -346,7 +346,7 @@ export default function LocaleLanding({
 
       <section
         id="cases"
-        className="bg-white py-24"
+        className="bg-white py-24 scroll-mt-[72px]"
         aria-labelledby="cases-title"
       >
         <div className="mx-auto max-w-7xl px-4">
