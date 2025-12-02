@@ -1,18 +1,55 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { SchoolLogoMarquee } from "@/components/ui/shadcn-io/marquee";
-import { getDictionary } from "@/lib/dictionaries";
-import { isSupportedLocale } from "@/lib/i18n";
+import { getLocaleData, languageAlternates } from "@/lib/metadata-helpers";
+
+export function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Metadata {
+  const { locale, dictionary, ogLocale } = getLocaleData(params.locale);
+  const hero = dictionary.home.hero;
+  const pageTitle = [hero.heading, hero.highlight].filter(Boolean).join(" ");
+  const fullTitle = `${pageTitle} | ${dictionary.brandName}`;
+  const description = hero.subheading;
+
+  return {
+    title: pageTitle,
+    description,
+    alternates: {
+      languages: languageAlternates()
+    },
+    openGraph: {
+      title: fullTitle,
+      description,
+      locale: ogLocale,
+      type: "website",
+      images: [
+        {
+          url: "/ppl-presenting.jpeg",
+          alt: dictionary.brandName
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+      images: ["/ppl-presenting.jpeg"]
+    }
+  };
+}
 
 export default function LocaleLanding({
   params
 }: {
   params: { locale: string };
 }) {
-  const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
-  const dictionary = getDictionary(locale);
+  const { locale, dictionary } = getLocaleData(params.locale);
   const contactHref = { pathname: `/${locale}/contact`, hash: "contact" };
   const {
     hero,

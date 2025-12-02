@@ -6,16 +6,16 @@ import { useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { SectionCta } from "@/components/section-cta";
-import { getDictionary, type PricingCategory } from "@/lib/dictionaries";
-import { isSupportedLocale } from "@/lib/i18n";
+import { type PricingCategory } from "@/lib/dictionaries";
+import { getLocaleData } from "@/lib/metadata-helpers";
 
 type PageProps = {
   params: { locale: string };
 };
 
 export default function ServicesPage({ params }: PageProps) {
-  const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
-  const pricing = getDictionary(locale).pricing;
+  const { locale, dictionary } = getLocaleData(params.locale);
+  const pricing = dictionary.pricing;
   const categories: PricingCategory[] = pricing.categories;
 
   const [activeCategory, setActiveCategory] = useState<string>(

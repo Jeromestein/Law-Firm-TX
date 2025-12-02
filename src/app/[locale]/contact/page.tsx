@@ -1,15 +1,53 @@
+import type { Metadata } from "next";
+
 import { Button } from "@/components/ui/button";
 import { SectionCta } from "@/components/section-cta";
-import { getDictionary } from "@/lib/dictionaries";
-import { isSupportedLocale } from "@/lib/i18n";
+import { getLocaleData, languageAlternates } from "@/lib/metadata-helpers";
+
+export function generateMetadata({
+  params
+}: {
+  params: { locale: string };
+}): Metadata {
+  const { dictionary, ogLocale } = getLocaleData(params.locale);
+  const contact = dictionary.contact;
+  const pageTitle = contact.hero.title;
+  const fullTitle = `${pageTitle} | ${dictionary.brandName}`;
+  const description = contact.hero.subtitle;
+
+  return {
+    title: pageTitle,
+    description,
+    alternates: {
+      languages: languageAlternates("/contact")
+    },
+    openGraph: {
+      title: fullTitle,
+      description,
+      locale: ogLocale,
+      type: "website",
+      images: [
+        {
+          url: "/tx_profile.jpg",
+          alt: contact.hero.title
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: fullTitle,
+      description,
+      images: ["/tx_profile.jpg"]
+    }
+  };
+}
 
 type PageProps = {
   params: { locale: string };
 };
 
 export default function ContactPage({ params }: PageProps) {
-  const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
-  const dictionary = getDictionary(locale);
+  const { locale, dictionary } = getLocaleData(params.locale);
   const contact = dictionary.contact;
 
   const mapEmbeds: Record<string, string> = {

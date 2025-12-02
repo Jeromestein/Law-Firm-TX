@@ -7,17 +7,15 @@ import { useEffect, useMemo, useState } from "react";
 import { Button } from "@/components/ui/button";
 import { SectionCta } from "@/components/section-cta";
 import { getCasesContent, type CaseEntry } from "@/lib/cases-page";
-import { getDictionary } from "@/lib/dictionaries";
-import { isSupportedLocale } from "@/lib/i18n";
+import { getLocaleData } from "@/lib/metadata-helpers";
 
 type PageProps = {
   params: { locale: string };
 };
 
 export default function CasesPage({ params }: PageProps) {
-  const locale = isSupportedLocale(params.locale) ? params.locale : "zh";
+  const { locale, dictionary } = getLocaleData(params.locale);
   const casesPage = getCasesContent(locale);
-  const dictionary = getDictionary(locale);
   const [activeSection, setActiveSection] = useState<string>(
     casesPage.sections[0]?.title ?? ""
   );
