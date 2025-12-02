@@ -214,9 +214,9 @@ const dictionaries: Record<Locale, Dictionary> = {
       hero: {
         eyebrow: "连接资本与全球机遇",
         heading: "从企业 IPO 到",
-        highlight: "全球身份规划",
+        highlight: "高端移民与全球身份规划",
         subheading:
-          "我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。",
+          "我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。安桥，让您安心的桥梁，助您跨越法律难题的桥梁。",
         ctaPrimary: "预约咨询",
         ctaSecondary: "探索业务",
       note: "咨询：半小时内免费，超过半小时按 $300/小时 收费"
@@ -699,7 +699,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         heading: "From IPO to",
         highlight: "Global Status Planning",
         subheading:
-          "We deliver more than legal advice—we build your bridge to the future with deep U.S. training and battle-tested experience. The bridge that lets clients rest easy • your safe crossing over legal challenges.",
+          "More than just legal advice -- we build bridge to the future with deep U.S. training and hands-on experience.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "Explore Services",
       note: "Consultations: first 30 minutes free, then $300/hour"
