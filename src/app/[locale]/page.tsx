@@ -96,16 +96,28 @@ export default function LocaleLanding({
       >
         <div className="absolute inset-0 overflow-hidden">
           <video
-            className="h-full w-full object-cover"
+            className="h-full w-full object-cover motion-reduce:hidden"
             autoPlay
             muted
             loop
             playsInline
-            preload="auto"
+            preload="metadata"
             poster="/ppl-presenting.jpeg"
           >
-            <source src="/hero-section-videos.mp4" type="video/mp4" />
+            <source
+              src="/hero-section-videos.mp4"
+              type="video/mp4"
+              media="(prefers-reduced-motion: no-preference)"
+            />
           </video>
+          <Image
+            src="/ppl-presenting.jpeg"
+            alt=""
+            fill
+            priority
+            className="hidden object-cover motion-reduce:block"
+            sizes="100vw"
+          />
           <div className="absolute inset-0 bg-primary/60" />
         </div>
         <div className="absolute inset-0 bg-gradient-to-b from-primary/30 to-primary" />
