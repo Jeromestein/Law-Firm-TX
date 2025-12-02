@@ -57,19 +57,17 @@ export function SchoolLogoMarquee({
                 {items.map((item) => (
                   <div
                     key={`${loopIndex}-${item.name}`}
-                    className="flex min-w-[160px] items-center gap-3 rounded-sm bg-white/5 px-4 py-3 ring-1 ring-white/10"
+                    className="flex min-w-[200px] items-center gap-3 px-2"
                   >
-                    <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-full bg-white/10 p-2 ring-1 ring-white/10">
-                      <Image
-                        src={item.logo}
-                        alt={item.alt || item.name}
-                        fill
-                        className="object-contain"
-                        sizes="48px"
-                        draggable={false}
-                      />
-                    </div>
-                    <span className="max-w-[160px] text-sm font-semibold leading-tight text-white break-words">
+                    <Image
+                      src={item.logo}
+                      alt={item.alt || item.name}
+                      width={48}
+                      height={48}
+                      className="h-12 w-12 rounded-sm object-contain bg-white/10"
+                      draggable={false}
+                    />
+                    <span className="max-w-[200px] text-base font-semibold leading-tight text-white break-words">
                       {item.name}
                     </span>
                   </div>
