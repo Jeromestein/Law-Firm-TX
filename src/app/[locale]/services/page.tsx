@@ -35,7 +35,7 @@ export default function ServicesPage({ params }: PageProps) {
 
   return (
     <main className="bg-slate-50 text-slate-800" lang={locale}>
-      <section className="relative overflow-hidden bg-primary text-white">
+      <section id="capital-markets" className="relative overflow-hidden bg-primary text-white scroll-mt-[72px]">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/80 to-primary/60" />
         <div className="relative mx-auto flex max-w-6xl flex-col gap-6 px-4 pb-16 pt-24 md:flex-row md:items-center md:pb-20 md:pt-28">
           <div className="space-y-4 md:w-2/3">
@@ -81,8 +81,8 @@ export default function ServicesPage({ params }: PageProps) {
         </div>
 
         <div
-          id="categories"
-          className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-6 shadow-lg ring-1 ring-slate-200/60"
+          id="immigration"
+          className="relative overflow-hidden rounded-2xl border border-slate-200/80 bg-white/90 px-4 py-6 shadow-lg ring-1 ring-slate-200/60 scroll-mt-[72px]"
         >
           <div className="pointer-events-none absolute inset-0">
             <div className="absolute -left-24 top-0 h-56 w-56 rounded-full bg-primary/5 blur-3xl" />

@@ -385,9 +385,10 @@ export default function LocaleLanding({
 
           <div className="grid grid-cols-1 gap-8 md:grid-cols-3">
             {casesSection.studies.map((item) => (
-              <article
+              <Link
                 key={item.title}
-                className="group border border-slate-100 bg-slate-50 transition duration-300 hover:shadow-xl"
+                href={{ pathname: `/${locale}/cases`, hash: item.href.replace(/^#/, "") }}
+                className="group block border border-slate-100 bg-slate-50 transition duration-300 hover:shadow-xl focus:outline-none focus-visible:ring-2 focus-visible:ring-gold"
               >
                 <div className="relative h-48 overflow-hidden bg-slate-200">
                   <div
@@ -408,15 +409,21 @@ export default function LocaleLanding({
                     {item.title}
                   </h3>
                   <p className="mb-4 text-sm text-slate-500">{item.body}</p>
-                  <Link
-                    href={{ pathname: `/${locale}/cases`, hash: item.href.replace(/^#/, "") }}
-                    className="border-b border-slate-300 pb-1 text-sm font-bold text-primary"
-                  >
+                  <span className="border-b border-slate-300 pb-1 text-sm font-bold text-primary">
                     {casesSection.readMore}
-                  </Link>
+                  </span>
                 </div>
-              </article>
+              </Link>
             ))}
+          </div>
+          <div className="mt-10 flex justify-center md:hidden">
+            <Link
+              href={`/${locale}/cases`}
+              className="inline-flex items-center gap-2 rounded-sm border border-primary px-4 py-3 text-sm font-semibold text-primary transition hover:bg-primary hover:text-white"
+            >
+              {casesSection.viewAll}
+              <span aria-hidden>→</span>
+            </Link>
           </div>
         </div>
       </section>

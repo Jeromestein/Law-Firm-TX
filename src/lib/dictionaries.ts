@@ -14,6 +14,7 @@ export type HomeService = {
   description: string;
   bullets: string[];
   label: string;
+  href?: string;
 };
 
 export type CaseStudy = {
@@ -281,7 +282,8 @@ const dictionaries: Record<Locale, Dictionary> = {
               "SPAC 上市法律顾问",
               "私募股权与风险投资 (PE/VC)"
             ],
-            label: "IPO"
+            label: "IPO",
+            href: "capital-markets"
           },
           {
             title: "高端移民与身份规划",
@@ -292,7 +294,8 @@ const dictionaries: Record<Locale, Dictionary> = {
               "NIW 国家利益豁免",
               "L-1 / EB-1C 跨国高管调动"
             ],
-            label: "移民"
+            label: "移民",
+            href: "immigration"
           }
         ]
       },
@@ -765,7 +768,8 @@ const dictionaries: Record<Locale, Dictionary> = {
               "SPAC listing counsel",
               "Private equity and venture financing (PE/VC)"
             ],
-            label: "IPO"
+            label: "IPO",
+            href: "capital-markets"
           },
           {
             title: "Premium Immigration & Status Planning",
@@ -776,7 +780,8 @@ const dictionaries: Record<Locale, Dictionary> = {
               "NIW National Interest Waiver",
               "L-1 / EB-1C Multinational executives"
             ],
-            label: "Immigration"
+            label: "Immigration",
+            href: "immigration"
           }
         ]
       },
