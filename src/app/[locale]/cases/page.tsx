@@ -21,6 +21,7 @@ export default function CasesPage({ params }: PageProps) {
   const [activeSection, setActiveSection] = useState<string>(
     casesPage.sections[0]?.title ?? ""
   );
+  const [pendingHash, setPendingHash] = useState<string | null>(null);
   const currentSection = useMemo(
     () => casesPage.sections.find((s) => s.title === activeSection) ?? casesPage.sections[0],
     [activeSection, casesPage.sections]
@@ -69,7 +70,11 @@ export default function CasesPage({ params }: PageProps) {
   useEffect(() => {
     const syncFromHash = (hashValue: string) => {
       const hash = hashValue.startsWith("#") ? hashValue.slice(1) : hashValue;
-      if (!hash.startsWith("case-")) return;
+      if (!hash.startsWith("case-")) {
+        setPendingHash(null);
+        return;
+      }
+      setPendingHash(hash);
       const index = Number.parseInt(hash.replace("case-", ""), 10);
       if (Number.isNaN(index) || index < 1) return;
       let cursor = 0;
@@ -77,11 +82,6 @@ export default function CasesPage({ params }: PageProps) {
         const nextCursor = cursor + section.cases.length;
         if (index >= cursor + 1 && index <= nextCursor) {
           setActiveSection(section.title);
-          // wait for render then scroll target into view
-          setTimeout(() => {
-            const el = document.getElementById(hash);
-            el?.scrollIntoView({ behavior: "smooth", block: "start" });
-          }, 0);
           break;
         }
         cursor = nextCursor;
@@ -92,6 +92,16 @@ export default function CasesPage({ params }: PageProps) {
     window.addEventListener("hashchange", onHashChange);
     return () => window.removeEventListener("hashchange", onHashChange);
   }, [casesPage.sections]);
+
+  useEffect(() => {
+    if (!pendingHash) return;
+    const el = document.getElementById(pendingHash);
+    if (!el) return;
+    // Run on the next frame so the newly rendered section is in the DOM
+    requestAnimationFrame(() => {
+      el.scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  }, [pendingHash, activeSection]);
 
   return (
     <main className="bg-slate-50 text-slate-800" lang={locale}>
