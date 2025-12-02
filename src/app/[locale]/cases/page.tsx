@@ -6,7 +6,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { Button } from "@/components/ui/button";
 import { SectionCta } from "@/components/section-cta";
-import { getCasesContent, type CaseEntry } from "@/lib/cases-page";
+import { type CaseEntry } from "@/lib/dictionaries";
 import { getLocaleData } from "@/lib/metadata-helpers";
 
 type PageProps = {
@@ -15,7 +15,7 @@ type PageProps = {
 
 export default function CasesPage({ params }: PageProps) {
   const { locale, dictionary } = getLocaleData(params.locale);
-  const casesPage = getCasesContent(locale);
+  const casesPage = dictionary.casesPage;
   const [activeSection, setActiveSection] = useState<string>(
     casesPage.sections[0]?.title ?? ""
   );

@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import type { ReactNode } from "react";
 
-import { getCasesContent } from "@/lib/cases-page";
+import { getDictionary } from "@/lib/dictionaries";
 import { getLocaleData, languageAlternates } from "@/lib/metadata-helpers";
 
 export function generateMetadata({
@@ -10,7 +10,7 @@ export function generateMetadata({
   params: { locale: string };
 }): Metadata {
   const { locale, dictionary, ogLocale } = getLocaleData(params.locale);
-  const casesPage = getCasesContent(locale);
+  const casesPage = dictionary.casesPage;
   const pageTitle = casesPage.hero.title;
   const fullTitle = `${pageTitle} | ${dictionary.brandName}`;
   const description = casesPage.hero.subtitle;
