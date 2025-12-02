@@ -141,6 +141,9 @@ export default function LocaleLanding({
               <Link href={`/${locale}/services`}>{hero.ctaSecondary}</Link>
             </Button>
           </div>
+          <p className="mt-4 text-sm text-slate-200 md:text-base">
+            {hero.proof}
+          </p>
           <p className="mt-4 text-xs font-medium uppercase tracking-[0.18em] text-gold">
             {hero.note}
           </p>

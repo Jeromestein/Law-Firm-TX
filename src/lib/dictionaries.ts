@@ -33,6 +33,7 @@ export type HomeContent = {
     subheading: string;
     ctaPrimary: string;
     ctaSecondary: string;
+    proof: string;
     note: string;
   };
   education: {
@@ -219,8 +220,9 @@ const dictionaries: Record<Locale, Dictionary> = {
           "我们要做的不仅是提供法律建议，而是为您构建通往未来的桥梁。拥有深厚的北美学术背景与顶尖的实战经验。安桥，让您安心的桥梁，助您跨越法律难题的桥梁。",
         ctaPrimary: "预约咨询",
         ctaSecondary: "探索业务",
-      note: "咨询：半小时内免费，超过半小时按 $300/小时 收费"
-    },
+        proof: "纽约 / 加州双执照律师团队，资本市场 + 高端移民双线专长",
+        note: "咨询：半小时内免费，超过半小时按 $300/小时 收费"
+      },
     education: {
       title: "精英教育背景与资质",
       subtitle: "",
@@ -675,7 +677,7 @@ const dictionaries: Record<Locale, Dictionary> = {
       services: "Expertise",
       cases: "Case Studies",
       pricing: "Services & Pricing",
-      consult: "Book a Call"
+      consult: "Book a Consultation"
     },
     footer: {
       tagline: "Apex Bridge, Your safe crossing over legal challenges.",
@@ -699,11 +701,12 @@ const dictionaries: Record<Locale, Dictionary> = {
         heading: "From IPO to",
         highlight: "Global Status Planning",
         subheading:
-          "More than just legal advice -- we build bridge to the future with deep U.S. training and hands-on experience.",
+          "More than just legal advice—we build your bridge to the future with deep U.S. training and hands-on experience.",
         ctaPrimary: "Book a Consultation",
         ctaSecondary: "Explore Services",
-      note: "Consultations: first 30 minutes free, then $300/hour"
-    },
+        proof: "Dual-licensed NY/CA; SEC capital markets + premium immigration focus",
+        note: "Consultations: first 30 minutes free, then $300/hour"
+      },
     education: {
       title: "Education & Credentials",
       subtitle: "",
@@ -856,7 +859,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         eyebrow: "Get Started",
         heading: "Book a consult in minutes",
         description: "First 30 minutes are free; longer calls at $300/hour if needed.",
-        primary: "Book a Call",
+        primary: "Book a Consultation",
         secondary: "View Case Results"
       }
     },
