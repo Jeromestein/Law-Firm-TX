@@ -3,6 +3,7 @@ import Link from "next/link";
 
 import { Button } from "@/components/ui/button";
 import { SchoolLogoMarquee } from "@/components/school-logo-marquee";
+import { SchoolLogoMarquee as ShadcnSchoolLogoMarquee } from "@/components/ui/shadcn-io/marquee";
 import { getDictionary } from "@/lib/dictionaries";
 import { isSupportedLocale } from "@/lib/i18n";
 
@@ -253,6 +254,16 @@ export default function LocaleLanding({
           caption={educationMarquee.caption}
           pauseOnHover
           className="[--duration:20s]"
+        />
+      </section>
+
+      <section id="education-shadcn">
+        <ShadcnSchoolLogoMarquee
+          title={education.title}
+          items={schools}
+          caption={educationMarquee.caption}
+          pauseOnHover
+          speed={24}
         />
       </section>
 
