@@ -256,7 +256,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         ctaSecondary: "查看服务"
       },
       aboutPartner: {
-        role: "Off-Counsel",
+        role: "Of Counsel",
         title: "Yilei Huang, Esq.",
         imageAlt: "Yilei Huang 律师照片",
         paragraphs: [
@@ -739,7 +739,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         ctaSecondary: "View Services"
       },
       aboutPartner: {
-        role: "Off-Counsel",
+        role: "Of Counsel",
         title: "Yilei Huang, Esq.",
         imageAlt: "Portrait of Yilei Huang, Esq.",
         paragraphs: [
