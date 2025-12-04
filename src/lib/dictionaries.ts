@@ -789,25 +789,25 @@ const dictionaries: Record<Locale, Dictionary> = {
             {
               title: "Single living trust",
               subtitle: "单身信托",
-              features: [{ label: "律师费", price: "$1,000" }]
+              features: [{ label: "律师费", price: "$2,000" }]
             },
             {
               title: "Single + grant deeds",
               subtitle: "信托 + 过户文件",
               features: [
-                { label: "律师费", price: "$1,300", note: "含 pour-over will" }
+                { label: "律师费", price: "$3,000", note: "含 pour-over will" }
               ]
             },
             {
               title: "Couple living trust",
               subtitle: "夫妻联合信托",
-              features: [{ label: "律师费", price: "$1,500" }]
+              features: [{ label: "律师费", price: "$2,000" }]
             },
             {
               title: "Couple + grant deeds",
               subtitle: "信托 + 2 份过户文件",
               features: [
-                { label: "律师费", price: "$2,000", note: "含 2 份 pour-over wills" }
+                { label: "律师费", price: "$3,000", note: "含 2 份 pour-over wills" }
               ]
             }
           ]
@@ -1458,25 +1458,25 @@ const dictionaries: Record<Locale, Dictionary> = {
             {
               title: "Single living trust",
               subtitle: "Individual trust",
-              features: [{ label: "Attorney fee", price: "$1,000" }]
+              features: [{ label: "Attorney fee", price: "$2,000" }]
             },
             {
               title: "Single + grant deeds",
               subtitle: "Trust + deed filings",
               features: [
-                { label: "Attorney fee", price: "$1,300", note: "Includes pour-over will" }
+                { label: "Attorney fee", price: "$3,000", note: "Includes pour-over will" }
               ]
             },
             {
               title: "Couple living trust",
               subtitle: "Joint trust",
-              features: [{ label: "Attorney fee", price: "$1,500" }]
+              features: [{ label: "Attorney fee", price: "$2,000" }]
             },
             {
               title: "Couple + grant deeds",
               subtitle: "Trust + two deeds",
               features: [
-                { label: "Attorney fee", price: "$2,000", note: "Includes two pour-over wills" }
+                { label: "Attorney fee", price: "$3,000", note: "Includes two pour-over wills" }
               ]
             }
           ]
