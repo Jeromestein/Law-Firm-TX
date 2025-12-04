@@ -678,6 +678,45 @@ const dictionaries: Record<Locale, Dictionary> = {
           ]
         },
         {
+          id: "eb5",
+          name: "EB-5 投资移民",
+          description: "直投项目绿卡申请。",
+          services: [
+            {
+              title: "EB-5 投资移民（直投）",
+              subtitle: "直接投资项目",
+              features: [{ label: "律师费", price: "$20,000" }]
+            }
+          ]
+        },
+        {
+          id: "ip",
+          name: "商标与专利",
+          description: "商标注册与专利申请服务。",
+          services: [
+            {
+              title: "商标注册",
+              subtitle: "每个类别",
+              features: [{ label: "律师费", price: "$1,000" }]
+            },
+            {
+              title: "外观专利申请包",
+              subtitle: "含画图",
+              features: [{ label: "律师费", price: "$2,000", note: "含画图" }]
+            },
+            {
+              title: "发明专利撰写",
+              subtitle: "标准撰写",
+              features: [{ label: "律师费", price: "$15,000" }]
+            },
+            {
+              title: "发明专利撰写（高等级）",
+              subtitle: "复杂或高价值专利",
+              features: [{ label: "律师费", price: "$20,000" }]
+            }
+          ]
+        },
+        {
           id: "family",
           name: "亲属移民",
           description: "直系亲属绿卡、领馆程序与面谈陪同。",
@@ -1343,6 +1382,45 @@ const dictionaries: Record<Locale, Dictionary> = {
                 { label: "Attorney fee", price: "$1,500 / person" },
                 { label: "I-485 filing fee", price: "$1,440 / person" }
               ]
+            }
+          ]
+        },
+        {
+          id: "eb5",
+          name: "EB-5 Investment",
+          description: "Direct investment green card filings.",
+          services: [
+            {
+              title: "EB-5 Direct Investment",
+              subtitle: "Investor green card",
+              features: [{ label: "Attorney fee", price: "$20,000" }]
+            }
+          ]
+        },
+        {
+          id: "ip",
+          name: "Trademarks & Patents",
+          description: "Trademark filing and patent drafting packages.",
+          services: [
+            {
+              title: "Trademark Filing",
+              subtitle: "Per class",
+              features: [{ label: "Attorney fee", price: "$1,000" }]
+            },
+            {
+              title: "Design Patent Package",
+              subtitle: "Includes drawings",
+              features: [{ label: "Attorney fee", price: "$2,000", note: "Drawings included" }]
+            },
+            {
+              title: "Invention Patent Drafting",
+              subtitle: "Standard drafting",
+              features: [{ label: "Attorney fee", price: "$15,000" }]
+            },
+            {
+              title: "Invention Patent Drafting (Advanced)",
+              subtitle: "Complex or high-value patents",
+              features: [{ label: "Attorney fee", price: "$20,000" }]
             }
           ]
         },
