@@ -732,6 +732,38 @@ const dictionaries: Record<Locale, Dictionary> = {
           ]
         },
         {
+          id: "entity",
+          name: "公司注册",
+          description: "EIN 税号与 501(c)(3) 非盈利机构注册。",
+          services: [
+            {
+              title: "税号",
+              subtitle: "EIN 申请",
+              features: [{ label: "律师费", price: "$1,000" }]
+            },
+            {
+              title: "注册非盈利性组织",
+              subtitle: "含 501(c)(3) 免税资格",
+              features: [{ label: "律师费", price: "$2,000" }]
+            },
+            {
+              title: "注册教育基金会",
+              subtitle: "含 501(c)(3) 免税资格",
+              features: [{ label: "律师费", price: "$2,000" }]
+            },
+            {
+              title: "注册科研基金会",
+              subtitle: "含 501(c)(3) 免税资格",
+              features: [{ label: "律师费", price: "$2,000" }]
+            },
+            {
+              title: "成立宗教组织",
+              subtitle: "含 501(c)(3) 免税资格",
+              features: [{ label: "律师费", price: "$2,000" }]
+            }
+          ]
+        },
+        {
           id: "family",
           name: "亲属移民",
           description: "直系亲属绿卡、领馆程序与面谈陪同。",
@@ -741,7 +773,7 @@ const dictionaries: Record<Locale, Dictionary> = {
               subtitle: "境内调整",
               popular: true,
               features: [
-                { label: "律师费", price: "$2,000", note: "含工卡/回美证则 $2,500" },
+                { label: "律师费", price: "$3,000", note: "含工卡/回美证则 $3,500" },
                 { label: "I-130 申请费", price: "$675" },
                 { label: "I-485 申请费", price: "$1,440" },
                 { label: "I-131 申请费", price: "$630" },
@@ -752,7 +784,7 @@ const dictionaries: Record<Locale, Dictionary> = {
               title: "I-130 领馆程序",
               subtitle: "境外领馆面签",
               features: [
-                { label: "律师费", price: "$2,500" },
+                { label: "律师费", price: "$3,000" },
                 { label: "I-130 申请费", price: "$675" },
                 { label: "NVC 步骤费", price: "$325 + $120" },
                 { label: "绿卡制作费", price: "$220" }
@@ -863,6 +895,11 @@ const dictionaries: Record<Locale, Dictionary> = {
               features: [
                 { label: "律师费", price: "$3,000", note: "含 2 份 pour-over wills" }
               ]
+            },
+            {
+              title: "遗嘱",
+              subtitle: "单份遗嘱",
+              features: [{ label: "律师费", price: "$1,000" }]
             }
           ]
         },
@@ -1449,6 +1486,38 @@ const dictionaries: Record<Locale, Dictionary> = {
           ]
         },
         {
+          id: "entity",
+          name: "Entity Formation",
+          description: "EIN/tax IDs and 501(c)(3) nonprofit registrations.",
+          services: [
+            {
+              title: "EIN / Tax ID",
+              subtitle: "Application",
+              features: [{ label: "Attorney fee", price: "$1,000" }]
+            },
+            {
+              title: "Nonprofit Registration",
+              subtitle: "Includes 501(c)(3) tax-exempt status",
+              features: [{ label: "Attorney fee", price: "$2,000" }]
+            },
+            {
+              title: "Education Foundation Registration",
+              subtitle: "Includes 501(c)(3) tax-exempt status",
+              features: [{ label: "Attorney fee", price: "$2,000" }]
+            },
+            {
+              title: "Research Foundation Registration",
+              subtitle: "Includes 501(c)(3) tax-exempt status",
+              features: [{ label: "Attorney fee", price: "$2,000" }]
+            },
+            {
+              title: "Religious Organization Formation",
+              subtitle: "Includes 501(c)(3) tax-exempt status",
+              features: [{ label: "Attorney fee", price: "$2,000" }]
+            }
+          ]
+        },
+        {
           id: "family",
           name: "Family-Based",
           description: "Immediate relatives, consular processing, and interview prep.",
@@ -1458,7 +1527,7 @@ const dictionaries: Record<Locale, Dictionary> = {
               subtitle: "Adjustment of status",
               popular: true,
               features: [
-                { label: "Attorney fee", price: "$2,000", note: "With EAD/AP $2,500" },
+                { label: "Attorney fee", price: "$3,000", note: "With EAD/AP $3,500" },
                 { label: "I-130 filing fee", price: "$675" },
                 { label: "I-485 filing fee", price: "$1,440" },
                 { label: "I-131 filing fee", price: "$630" },
@@ -1469,7 +1538,7 @@ const dictionaries: Record<Locale, Dictionary> = {
               title: "I-130 Consular",
               subtitle: "Consular interview",
               features: [
-                { label: "Attorney fee", price: "$2,500" },
+                { label: "Attorney fee", price: "$3,000" },
                 { label: "I-130 filing fee", price: "$675" },
                 { label: "NVC fees", price: "$325 + $120" },
                 { label: "Green card production", price: "$220" }
@@ -1580,6 +1649,11 @@ const dictionaries: Record<Locale, Dictionary> = {
               features: [
                 { label: "Attorney fee", price: "$3,000", note: "Includes two pour-over wills" }
               ]
+            },
+            {
+              title: "Will",
+              subtitle: "Single will",
+              features: [{ label: "Attorney fee", price: "$1,000" }]
             }
           ]
         },
