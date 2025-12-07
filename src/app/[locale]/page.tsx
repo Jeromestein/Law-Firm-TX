@@ -57,6 +57,7 @@ export default function LocaleLanding({
     educationMarquee,
     about,
     aboutPartner,
+    aboutManager,
     servicesSection,
     casesSection
   } = dictionary.home;
@@ -294,6 +295,29 @@ export default function LocaleLanding({
               </div>
             </div>
           </div>
+          {aboutManager ? (
+            <div className="mt-16 rounded-sm border border-slate-200 bg-white p-8 shadow-2xl">
+              <p className="mb-2 text-sm font-bold uppercase tracking-widest text-gold">
+                {aboutManager.role}
+              </p>
+              <h3 className="text-3xl font-serif font-bold text-primary">
+                {aboutManager.title}
+              </h3>
+              <div className="mt-4 space-y-4 leading-relaxed text-slate-600">
+                {aboutManager.paragraphs.map((paragraph) => (
+                  <p key={paragraph}>{paragraph}</p>
+                ))}
+              </div>
+              <div className="mt-6 flex flex-wrap gap-3">
+                <Button asChild>
+                  <Link href={contactHref}>{about.ctaPrimary}</Link>
+                </Button>
+                <Button asChild variant="outline">
+                  <Link href="#services">{about.ctaSecondary}</Link>
+                </Button>
+              </div>
+            </div>
+          ) : null}
         </div>
       </section>
 

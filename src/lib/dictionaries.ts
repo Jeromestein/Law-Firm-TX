@@ -87,6 +87,12 @@ export type HomeContent = {
     paragraphs: string[];
     imageAlt: string;
   };
+  aboutManager?: {
+    role: string;
+    title: string;
+    paragraphs: string[];
+    imageAlt?: string;
+  };
   servicesSection: {
     title: string;
     services: HomeService[];
@@ -300,6 +306,15 @@ const dictionaries: Record<Locale, Dictionary> = {
           "除移民外，黄律师亦为企业与投资人提供公司架构、融资安排及合规咨询，并处理跨境交易与争议解决的全流程法律服务。",
           "加入 Apex Bridge 之前，黄律师曾在洛杉矶与上海的知名律所（包括 Baker McKenzie FenXun 与金杜律师事务所）任职，协助跨国客户完成 IPO、公司治理与仲裁项目。",
           "黄律师获南加州大学（USC）法学硕士（LL.M.）及华东政法大学法学学士（LL.B.），现于 UCLA, Anderson School of Management 攻读 MBA，并担任加州认证公证员。"
+        ]
+      },
+      aboutManager: {
+        role: "业务经理 / 法律助理",
+        title: "Joyce Guan",
+        paragraphs: [
+          "Joyce Guan 是本所的法律助理，主要负责公司的企业与证券业务。她拥有纽约城市学院的经济学硕士学位，专业涵盖国际金融管理、期权与期货以及数据分析与商业决策等领域。",
+          "加入本所前，她担任 ATA 认证译员三年，为客户及法律团队提供中英双语沟通与跨境文件处理支持。其专业经验涵盖私募、ICO、IPO，以及与《1933 年证券法》和《1934 年证券交易法》相关的合规事务。",
+          "Joyce 以扎实的分析能力、严谨细致的工作态度和专业的双语能力，在本所的交易与监管项目中发挥重要支持作用。"
         ]
       },
       servicesSection: {
@@ -1007,6 +1022,15 @@ const dictionaries: Record<Locale, Dictionary> = {
           "In addition to immigration, Ms. Huang advises businesses and investors on corporate structures, financing arrangements, and compliance with U.S. regulations. She also provides comprehensive legal services in cross-border transactions and dispute resolution.",
           "Prior to joining Apex Bridge, Ms. Huang worked at law firms in Los Angeles and Shanghai, including Baker McKenzie FenXun and King & Wood Mallesons, where she supported multinational clients in IPO projects, corporate governance, and arbitration cases.",
           "Ms. Huang earned her LL.M. from the University of Southern California (USC) and her LL.B. from East China University of Political Science and Law. She is currently pursuing her MBA at UCLA, Anderson School of Management. Besides her identity as an Attorney, she is also a commissioned California Notary Public."
+        ]
+      },
+      aboutManager: {
+        role: "Business Manager / Law Assistant",
+        title: "Joyce Guan",
+        paragraphs: [
+          "Joyce Guan is a Law Assistant supporting the firm’s corporate and securities practice. She holds a Master’s degree in Economics from the City College of New York, specializing in international financial management, options and futures, and data analysis for business decision-making.",
+          "Before joining the firm, Joyce worked as an ATA-certified translator for three years, assisting clients and legal teams with bilingual communication and cross-border documentation. Her experience includes supporting matters involving private placements, ICOs, IPOs, and compliance with the Securities Act of 1933 and the Securities Exchange Act of 1934.",
+          "Joyce brings strong analytical skills, meticulous attention to detail, and multilingual expertise to her work across the firm’s transactional and regulatory matters."
         ]
       },
       servicesSection: {
