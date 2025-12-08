@@ -801,6 +801,33 @@ const dictionaries: Record<Locale, Dictionary> = {
           ]
         },
         {
+          id: "asylum",
+          name: "庇护",
+          description: "政治庇护、移民法庭与上诉。",
+          services: [
+            {
+              title: "政治庇护",
+              subtitle: "庇护申请",
+              features: [{ label: "律师费", price: "$3,000" }]
+            },
+            {
+              title: "保释",
+              subtitle: "移民法庭保释听证",
+              features: [{ label: "律师费", price: "$4,000" }]
+            },
+            {
+              title: "小庭 + 大庭",
+              subtitle: "Master + Individual Hearing",
+              features: [{ label: "律师费", price: "$3,000" }]
+            },
+            {
+              title: "BIA 上诉",
+              subtitle: "行政上诉办公室",
+              features: [{ label: "律师费", price: "$3,000" }]
+            }
+          ]
+        },
+        {
           id: "visas",
           name: "各类签证",
           description: "含小雇主费用提示，避免意外成本。",
@@ -1551,6 +1578,33 @@ const dictionaries: Record<Locale, Dictionary> = {
                 { label: "Attorney escort", price: "$1,000" },
                 { label: "Interpreter", price: "$700" }
               ]
+            }
+          ]
+        },
+        {
+          id: "asylum",
+          name: "Asylum",
+          description: "Political asylum filings, court hearings, and appeals.",
+          services: [
+            {
+              title: "Political Asylum",
+              subtitle: "Form I-589",
+              features: [{ label: "Attorney fee", price: "$3,000" }]
+            },
+            {
+              title: "Bond Hearing",
+              subtitle: "Immigration court bond",
+              features: [{ label: "Attorney fee", price: "$4,000" }]
+            },
+            {
+              title: "Master + Individual Hearing",
+              subtitle: "Court representation",
+              features: [{ label: "Attorney fee", price: "$3,000" }]
+            },
+            {
+              title: "BIA Appeal",
+              subtitle: "Board of Immigration Appeals",
+              features: [{ label: "Attorney fee", price: "$3,000" }]
             }
           ]
         },
