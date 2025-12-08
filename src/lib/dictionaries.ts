@@ -1514,7 +1514,7 @@ const dictionaries: Record<Locale, Dictionary> = {
         },
         {
           id: "entity",
-          name: "Entity Formation",
+          name: "Form a Business",
           description: "EIN/tax IDs and 501(c)(3) nonprofit registrations.",
           services: [
             {
