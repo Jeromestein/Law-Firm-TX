@@ -30,11 +30,21 @@ export function SiteFooter({ locale }: FooterProps) {
           <h5 className="mb-4 font-bold text-white">{dictionary.footer.contactTitle}</h5>
           <p className="mb-2">{dictionary.footer.losAngeles}</p>
           <p className="mb-2">{dictionary.footer.irvine}</p>
-          <p className="mb-2">
-            <a href={dictionary.footer.phoneHref} className="transition hover:text-gold">
-              {dictionary.footer.phoneLabel}
-            </a>
-          </p>
+          {dictionary.footer.phoneItems?.length ? (
+            dictionary.footer.phoneItems.map((phone) => (
+              <p key={phone.href} className="mb-2">
+                <a href={phone.href} className="transition hover:text-gold">
+                  {phone.label}
+                </a>
+              </p>
+            ))
+          ) : (
+            <p className="mb-2">
+              <a href={dictionary.footer.phoneHref} className="transition hover:text-gold">
+                {dictionary.footer.phoneLabel}
+              </a>
+            </p>
+          )}
           <p>
             <a href={dictionary.footer.emailHref} className="transition hover:text-gold">
               {dictionary.footer.emailLabel}

@@ -170,6 +170,7 @@ export type FooterContent = {
   irvine: string;
   phoneLabel: string;
   phoneHref: string;
+  phoneItems?: { label: string; href: string }[];
   emailLabel: string;
   emailHref: string;
   quickLinksTitle: string;
@@ -239,8 +240,12 @@ const dictionaries: Record<Locale, Dictionary> = {
       contactTitle: "联系方式",
       losAngeles: "纽约地址：60-20 Woodside Ave Suite 205, Woodside, NY 11377",
       irvine: "加州地址：7515 Irvine Center Dr Suite 130, Irvine, CA 92618",
-      phoneLabel: "电话：949-213-5199",
+      phoneLabel: "电话（加州）：949-213-5199 / 电话（纽约）：917-200-4938",
       phoneHref: "tel:9492135199",
+      phoneItems: [
+        { label: "电话（加州）：949-213-5199", href: "tel:9492135199" },
+        { label: "电话（纽约）：917-200-4938", href: "tel:9172004938" }
+      ],
       emailLabel: "邮箱：alextian@apexbrg.com",
       emailHref: "mailto:alextian@apexbrg.com",
       quickLinksTitle: "快速链接",
@@ -590,9 +595,15 @@ const dictionaries: Record<Locale, Dictionary> = {
         description: "请简述需求和时间安排，我们将在 1 个工作日内回应。",
         items: [
           {
-            label: "电话",
+            label: "电话（加州）",
             value: "949-213-5199",
             href: "tel:9492135199",
+            helper: "工作日 9am - 5pm，可短信"
+          },
+          {
+            label: "电话（纽约）",
+            value: "917-200-4938",
+            href: "tel:9172004938",
             helper: "工作日 9am - 5pm，可短信"
           },
           {
@@ -1019,8 +1030,12 @@ const dictionaries: Record<Locale, Dictionary> = {
       contactTitle: "Contact",
       losAngeles: "New York: 60-20 Woodside Ave Suite 205, Woodside, NY 11377",
       irvine: "California: 7515 Irvine Center Dr Suite 130, Irvine, CA 92618",
-      phoneLabel: "Phone: 949-213-5199",
+      phoneLabel: "Phone (CA): 949-213-5199 / Phone (NY): 917-200-4938",
       phoneHref: "tel:9492135199",
+      phoneItems: [
+        { label: "Phone (CA): 949-213-5199", href: "tel:9492135199" },
+        { label: "Phone (NY): 917-200-4938", href: "tel:9172004938" }
+      ],
       emailLabel: "Email: alextian@apexbrg.com",
       emailHref: "mailto:alextian@apexbrg.com",
       quickLinksTitle: "Quick Links",
@@ -1371,9 +1386,15 @@ const dictionaries: Record<Locale, Dictionary> = {
         description: "Tell us your goals and timing so we can prepare next steps.",
         items: [
           {
-            label: "Phone",
+            label: "Phone (CA)",
             value: "949-213-5199",
             href: "tel:9492135199",
+            helper: "Weekdays 9am-5pm; text for urgent matters"
+          },
+          {
+            label: "Phone (NY)",
+            value: "917-200-4938",
+            href: "tel:9172004938",
             helper: "Weekdays 9am-5pm; text for urgent matters"
           },
           {
